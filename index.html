@@ -525,7 +525,7 @@ html.anim .entry.in .lvl i:nth-child(5) { transition-delay: .32s; }
 }
 
 /* ------------------------------------------------------------------
-   V6 — Technique & couleur, tons gris (dérivée de la V5)
+   V7 (base V6) — Technique & couleur, tons gris (dérivée de la V5)
    Gris graphite, traits gris clair, cotes orange sécurité ; chaque domaine
    d'expertise porte la couleur de son « calque » CAO.
 ------------------------------------------------------------------- */
@@ -765,6 +765,119 @@ footer { background: #33373C; border-top-color: #575D63; }
 }
 
 /* ------------------------------------------------------------------
+   V7 — Pilotage, management & organisation industrielle
+------------------------------------------------------------------- */
+/* Étiquettes d'axes dans le hero */
+.axes { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px; }
+.axes span {
+  font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase;
+  padding: 7px 10px; border: 1px solid rgba(205,210,215,.28); color: #E6E9EC;
+}
+.axes span:first-child { border-color: var(--accent-lt); color: var(--accent-lt); }
+html.anim .axes span { animation: fadeUp .6s var(--ease) backwards; animation-delay: calc(.85s + var(--i, 0) * .07s); }
+
+/* Carte des interfaces pilotées */
+.imap-cap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
+.imap { --gap: 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .9fr) minmax(0, 1fr); column-gap: var(--gap); row-gap: 14px; align-items: center; }
+.node {
+  position: relative; background: var(--white); border: 1px solid var(--line); padding: 16px 18px;
+  display: grid; gap: 4px;
+}
+.node::before { content: ""; position: absolute; top: -1px; left: -1px; width: 28px; height: 3px; background: var(--layer, var(--accent)); }
+.node b { font: 600 15.5px/1.25 var(--f-display); color: var(--anthracite); }
+.node span { font-size: 13.5px; line-height: 1.45; color: var(--steel); }
+.node.l { grid-column: 1; text-align: right; }
+.node.l::before { left: auto; right: -1px; }
+.node.r { grid-column: 3; }
+.node::after { content: ""; position: absolute; top: 50%; height: 1px; width: var(--gap); background: var(--layer, var(--accent)); opacity: .7; }
+.node.l::after { left: 100%; }
+.node.r::after { right: 100%; }
+.hub {
+  grid-column: 2; grid-row: 1 / span 3; align-self: stretch;
+  display: grid; align-content: center; gap: 8px; text-align: center;
+  background: var(--anthracite); color: var(--white); padding: 26px 22px; position: relative;
+}
+.hub::before { content: ""; position: absolute; inset: 8px; border: 1px dashed rgba(205,210,215,.35); pointer-events: none; }
+.hub small { font: 500 10.5px/1.4 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-lt); }
+.hub b { font: 700 22px/1.15 var(--f-display); }
+.hub span { font-size: 14px; line-height: 1.5; color: #D9DDE1; }
+
+/* Méthode en 5 temps */
+.steps-title, .team-title { margin: 56px 0 18px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--anthracite); counter-reset: step; }
+.step { position: relative; padding: 20px 18px 6px 0; counter-increment: step; display: grid; gap: 8px; align-content: start; }
+.step + .step { padding-left: 18px; border-left: 1px solid var(--line); }
+.step::before { content: counter(step, decimal-leading-zero); font: 700 34px/1 var(--f-display); color: var(--accent); }
+.step::after {
+  content: ""; position: absolute; top: -6px; right: -6px; width: 10px; height: 10px; z-index: 1;
+  border-top: 2px solid var(--anthracite); border-right: 2px solid var(--anthracite); transform: rotate(45deg); background: transparent;
+}
+.step:last-child::after { display: none; }
+.step h3 { font: 700 18px/1.2 var(--f-display); color: var(--anthracite); text-transform: uppercase; letter-spacing: .03em; }
+.step p { font-size: 14.5px; line-height: 1.5; color: var(--text, #3A4046); }
+
+/* Esprit d'équipe */
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.team > div { background: var(--white); border: 1px solid var(--line); padding: 22px 22px 20px; display: grid; gap: 10px; align-content: start; position: relative; }
+.team > div::before { content: ""; position: absolute; top: -1px; left: -1px; width: 28px; height: 3px; background: var(--layer); }
+.team > div:nth-child(1) { --layer: var(--layer-c); }
+.team > div:nth-child(2) { --layer: var(--layer-d); }
+.team > div:nth-child(3) { --layer: var(--layer-a); }
+.team h3 { font: 700 19px/1.2 var(--f-display); color: var(--anthracite); }
+.team p { font-size: 14.8px; line-height: 1.55; color: #3A4046; }
+.team q { quotes: "« " " »"; color: var(--anthracite); font-style: italic; }
+html[lang="en"] .team q { quotes: "“" "”"; }
+.team .yr { font: 500 11px/1.4 var(--f-mono); letter-spacing: .08em; color: var(--steel); }
+
+@media screen and (max-width: 1080px) {
+  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 18px; }
+  .step:nth-child(4) { padding-left: 0; border-left: 0; }
+  .step:nth-child(3)::after { display: none; }
+  .team { grid-template-columns: minmax(0, 1fr); }
+}
+@media screen and (max-width: 880px) {
+  .imap { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
+  .hub { grid-column: 1; grid-row: auto; order: -1; }
+  .node.l, .node.r { grid-column: 1; text-align: left; margin-left: 22px; }
+  .node.l::before { left: -1px; right: auto; }
+  .node::after, .node.l::after, .node.r::after { left: -22px; right: auto; width: 22px; }
+  .imap { position: relative; }
+  .imap::before { content: ""; position: absolute; left: 0; top: 0; bottom: 30px; width: 1px; background: var(--line); }
+}
+@media screen and (max-width: 620px) {
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .step, .step + .step, .step:nth-child(4) { padding: 16px 0 4px; border-left: 0; }
+  .step + .step { border-top: 1px solid var(--line); }
+  .step::after { display: none; }
+}
+
+@media print {
+  #pilotage { break-before: page; }
+  .axes { margin-top: 2mm; }
+  .axes span { font-size: 6.8pt; padding: 1mm 1.6mm; color: var(--anthracite) !important; border-color: var(--line) !important; }
+  .axes span:first-child { color: var(--accent) !important; border-color: var(--accent) !important; }
+  .imap-cap { margin-bottom: 2mm; font-size: 6.8pt; }
+  .imap { --gap: 8mm; row-gap: 2mm; }
+  .node { padding: 2mm 2.5mm; }
+  .node b { font-size: 9.5pt; }
+  .node span { font-size: 8pt; }
+  .hub { background: #fff !important; color: var(--anthracite) !important; border: 1.5pt solid var(--anthracite); padding: 3mm; }
+  .hub b { font-size: 12pt; }
+  .hub span { color: #3A4046 !important; font-size: 8.4pt; }
+  .hub small { color: var(--accent) !important; font-size: 6.8pt; }
+  .steps-title, .team-title { margin: 5mm 0 2mm; font-size: 7pt; }
+  .step, .step + .step { padding: 2.5mm 2.5mm 0 0; }
+  .step + .step { padding-left: 2.5mm; }
+  .step::before { font-size: 16pt; }
+  .step h3 { font-size: 10pt; }
+  .step p { font-size: 8.4pt; }
+  .team { gap: 3mm; break-inside: avoid; }
+  .team > div { padding: 3mm; gap: 1.5mm; }
+  .team h3 { font-size: 10.5pt; }
+  .team p { font-size: 8.4pt; }
+}
+
+/* ------------------------------------------------------------------
    Impression A4 — « Download CV »
 ------------------------------------------------------------------- */
 @page { size: A4; margin: 13mm 14mm 14mm; }
@@ -880,6 +993,7 @@ footer { background: #33373C; border-top-color: #575D63; }
     <a class="brand" href="#top">ALBERTO RAMOS<span class="brand-sub"> <b>/</b> <span class="fr">ING. MÉCANIQUE</span><span class="en">MECH. ENG.</span></span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#profil"><span class="fr">Profil</span><span class="en">Profile</span></a>
+      <a href="#pilotage"><span class="fr">Pilotage</span><span class="en">Leadership</span></a>
       <a href="#expertise">Expertise</a>
       <a href="#experience"><span class="fr">Expérience</span><span class="en">Experience</span></a>
       <a href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a>
@@ -914,7 +1028,12 @@ footer { background: #33373C; border-top-color: #575D63; }
         <span>Vehicle &amp; Product Architecture</span>
         <span>Technical Project Lead</span>
       </div>
-      <p class="thesis">
+      <div class="axes" aria-label="Axes">
+        <span style="--i:0"><span class="fr">Technique</span><span class="en">Engineering</span></span>
+        <span style="--i:1">Management</span>
+        <span style="--i:2"><span class="fr">Esprit d'équipe</span><span class="en">Team spirit</span></span>
+        <span style="--i:3"><span class="fr">Organisation industrielle</span><span class="en">Industrial organisation</span></span>
+      </div>      <p class="thesis">
         <span class="fr">Comprendre un problème complexe, structurer l'architecture, faire converger les métiers — et piloter l'équipe jusqu'à la solution.</span>
         <span class="en">Understand a complex problem, structure the architecture, bring every discipline into alignment — and lead the team all the way to the solution.</span>
       </p>
@@ -939,7 +1058,7 @@ footer { background: #33373C; border-top-color: #575D63; }
         <dt><span class="fr">Spécialité</span><span class="en">Specialty</span></dt>
         <dd><span class="fr">Architecture véhicule</span><span class="en">Vehicle architecture</span></dd>
         <dt><span class="fr">Rôle</span><span class="en">Role</span></dt>
-        <dd><span class="fr">Pilotage technique</span><span class="en">Technical leadership</span></dd>
+        <dd><span class="fr">Pilotage technique · Management</span><span class="en">Technical leadership · Management</span></dd>
         <dt><span class="fr">Base</span><span class="en">Based in</span></dt>
         <dd>Mantes-la-Jolie, France</dd>
         <dt><span class="fr">Disponibilité</span><span class="en">Availability</span></dt>
@@ -979,8 +1098,61 @@ footer { background: #33373C; border-top-color: #575D63; }
   </div>
 </section>
 
+<!-- ================================================================ PILOTAGE & ORGANISATION -->
+<section id="pilotage" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Pilotage &amp; organisation</span><span class="en">Leadership &amp; organisation</span></p>
+      <h2><span class="fr">Faire converger une organisation industrielle complexe.</span><span class="en">Bringing a complex industrial organisation to convergence.</span></h2>
+    </div>
+
+    <p class="imap-cap"><span><span class="fr">Carte des interfaces pilotées</span><span class="en">Map of managed interfaces</span></span><span><span class="fr">Programme FlexEVAN · Renault</span><span class="en">FlexEVAN programme · Renault</span></span></p>
+    <div class="imap">
+      <div class="node l" style="--layer:var(--layer-b)"><b><span class="fr">Conception mécanique</span><span class="en">Mechanical design</span></b><span><span class="fr">CAO CATIA V6 · 3DEXPERIENCE · définition produit</span><span class="en">CATIA V6 · 3DEXPERIENCE · product definition</span></span></div>
+      <div class="hub">
+        <small><span class="fr">Rôle pivot</span><span class="en">Pivot role</span></small>
+        <b><span class="fr">Architecte synthèse · pilote technique</span><span class="en">Synthesis architect · technical lead</span></b>
+        <span><span class="fr">Priorise, synchronise les métiers et fait converger les solutions jusqu'aux jalons.</span><span class="en">Sets priorities, synchronises disciplines and drives solutions to convergence at each milestone.</span></span>
+      </div>
+      <div class="node r" style="--layer:var(--layer-d)"><b><span class="fr">Coût · process · délais</span><span class="en">Cost · process · schedule</span></b><span><span class="fr">Cohérence des solutions avec les contraintes</span><span class="en">Solutions kept consistent with constraints</span></span></div>
+      <div class="node l" style="--layer:var(--layer-e)"><b><span class="fr">Design &amp; innovation</span><span class="en">Design &amp; innovation</span></b><span><span class="fr">Design, innovation, dépôt de brevets, dossiers CIR</span><span class="en">Design, innovation, patent filings, R&amp;D tax credit files</span></span></div>
+      <div class="node r" style="--layer:var(--layer-a)"><b><span class="fr">Jalons &amp; livrables</span><span class="en">Milestones &amp; deliverables</span></b><span><span class="fr">Check-list métier, reporting, suivi EO/RO</span><span class="en">Discipline checklist, reporting, EO/RO tracking</span></span></div>
+      <div class="node l" style="--layer:var(--layer-c)"><b><span class="fr">Industrialisation</span><span class="en">Industrialisation</span></b><span><span class="fr">Interface conception / industrialisation, jusqu'aux outillages</span><span class="en">Design / industrialisation interface, through to tooling</span></span></div>
+      <div class="node r" style="--layer:var(--layer-c)"><b><span class="fr">Équipes internationales</span><span class="en">International teams</span></b><span><span class="fr">5 architectes pilotés · équipe de conception au RNTBCI</span><span class="en">5 architects led · design team at RNTBCI</span></span></div>
+    </div>
+
+    <p class="steps-title"><span class="fr">Méthode de pilotage — en 5 temps</span><span class="en">Leadership method — 5 stages</span></p>
+    <div class="steps">
+      <div class="step"><h3><span class="fr">Organiser</span><span class="en">Organise</span></h3><p><span class="fr">Staffing de l'équipe d'architectes, organisation et routines de travail.</span><span class="en">Staff the architect team, set up its organisation and working routines.</span></p></div>
+      <div class="step"><h3><span class="fr">Prioriser</span><span class="en">Prioritise</span></h3><p><span class="fr">Structurer l'architecture des sujets et prioriser les activités.</span><span class="en">Structure the architecture of topics and prioritise activities.</span></p></div>
+      <div class="step"><h3><span class="fr">Synchroniser</span><span class="en">Synchronise</span></h3><p><span class="fr">Animer et synchroniser les métiers autour d'une même cible.</span><span class="en">Facilitate and synchronise disciplines around a shared target.</span></p></div>
+      <div class="step"><h3><span class="fr">Converger</span><span class="en">Converge</span></h3><p><span class="fr">Challenger les constructions et valider les choix techniques.</span><span class="en">Challenge the designs and validate technical choices.</span></p></div>
+      <div class="step"><h3><span class="fr">Livrer</span><span class="en">Deliver</span></h3><p><span class="fr">Livrables aux jalons, reporting et suivi du statut des pièces (EO/RO).</span><span class="en">Milestone deliverables, reporting and part-status tracking (EO/RO).</span></p></div>
+    </div>
+
+    <p class="team-title"><span class="fr">Management &amp; esprit d'équipe</span><span class="en">Management &amp; team spirit</span></p>
+    <div class="team">
+      <div>
+        <h3><span class="fr">Animer l'équipe</span><span class="en">Lead the team</span></h3>
+        <p><span class="fr">Une équipe internationale de 5 architectes pilotée, animée <q>avec efficacité, malgré les aléas du projet</q>.</span><span class="en">An international team of 5 architects, led <q>effectively, despite the project's setbacks</q>.</span></p>
+        <span class="yr"><span class="fr">Retour managérial Renault · 2024</span><span class="en">Renault manager review · 2024 (translated)</span></span>
+      </div>
+      <div>
+        <h3><span class="fr">Améliorer le collectif</span><span class="en">Improve how we work</span></h3>
+        <p><span class="fr">Transformer les irritants en <q>propositions concrètes pour améliorer les modes de fonctionnement et les outils</q> — dont l'outil de suivi EO/RO.</span><span class="en">Turn friction into <q>concrete proposals to improve ways of working and tools</q> — including the EO/RO tracking tool.</span></p>
+        <span class="yr"><span class="fr">Retour managérial Renault · 2024</span><span class="en">Renault manager review · 2024 (translated)</span></span>
+      </div>
+      <div>
+        <h3><span class="fr">S'engager</span><span class="en">Commit</span></h3>
+        <p><span class="fr"><q>Rigueur, organisation, volontariat, proactivité, efficacité et engagement.</q> Pratiques agiles : Scrum Master, Agile Relay Practitioner.</span><span class="en"><q>Rigour, organisation, initiative, proactivity, efficiency and commitment.</q> Agile practice: Scrum Master, Agile Relay Practitioner.</span></p>
+        <span class="yr"><span class="fr">Retour managérial Renault · 2022</span><span class="en">Renault manager review · 2022 (translated)</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================================================================ 3. EXPERTISE -->
-<section id="expertise" class="alt">
+<section id="expertise">
   <div class="wrap">
     <div class="sec-head">
       <p class="label">Expertise</p>
@@ -1515,7 +1687,7 @@ footer { background: #33373C; border-top-color: #575D63; }
 
   // Apparition au défilement, par groupes (décalage --i dans chaque groupe)
   var groups = [
-    ".sec-head", ".gantt", ".sec-body .lead", ".sec-body .prose", ".facts", ".fact", ".pillars", ".pillar", ".split > div",
+    ".sec-head", ".gantt", ".imap-cap", ".imap", ".steps-title", ".step", ".team-title", ".team > div", ".sec-body .lead", ".sec-body .prose", ".facts", ".fact", ".pillars", ".pillar", ".split > div",
     ".chips", ".xp-group > .label", ".xp", ".quote", ".project", ".skills", ".skillset", ".ai-item",
     ".ai .tags", ".trio > div", ".entry", ".contact .wrap > *"
   ];
