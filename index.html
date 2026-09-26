@@ -877,6 +877,81 @@ html[lang="en"] .team q { quotes: "“" "”"; }
   .team p { font-size: 8.4pt; }
 }
 
+/* --- V7 · animations de la carte des interfaces et boucle agile --- */
+.node .pulse { display: none; }
+html.anim .imap .hub { opacity: 0; transform: scale(.94); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+html.anim .imap.in .hub { opacity: 1; transform: none; }
+html.anim .imap .node { opacity: 0; transition: opacity .6s var(--ease), transform .6s var(--ease); transition-delay: calc(.35s + var(--n, 0) * .12s); }
+html.anim .imap .node.l { transform: translateX(-18px); }
+html.anim .imap .node.r { transform: translateX(18px); }
+html.anim .imap.in .node { opacity: 1; transform: none; }
+html.anim .imap .node::after { transform: scaleX(0); transition: transform .6s var(--ease); transition-delay: calc(.3s + var(--n, 0) * .12s); }
+html.anim .imap .node.l::after { transform-origin: right center; }
+html.anim .imap .node.r::after { transform-origin: left center; }
+html.anim .imap.in .node::after { transform: scaleX(1); }
+
+/* Flux d'information : de chaque interface vers le rôle pivot */
+@keyframes flow-r { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(var(--gap)); opacity: 0; } }
+@keyframes flow-l { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(calc(var(--gap) * -1)); opacity: 0; } }
+html.anim .imap.in .node .pulse {
+  display: block; position: absolute; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%;
+  background: var(--layer, var(--accent)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--layer, var(--accent)) 22%, transparent);
+  animation: 2.6s linear infinite; animation-delay: calc(1.2s + var(--n, 0) * .43s);
+}
+html.anim .imap.in .node.l .pulse { left: 100%; animation-name: flow-r; }
+html.anim .imap.in .node.r .pulse { right: 100%; animation-name: flow-l; }
+@keyframes hub-ping { 0%, 70% { box-shadow: 0 0 0 0 rgba(255,138,61,0); } 80% { box-shadow: 0 0 0 6px rgba(255,138,61,.25); } 100% { box-shadow: 0 0 0 12px rgba(255,138,61,0); } }
+html.anim .imap.in .hub { animation: hub-ping 2.6s ease-out infinite 1.6s; }
+.imap-legend { margin-top: 14px; display: flex; align-items: center; gap: 8px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .08em; color: var(--steel); }
+.imap-legend i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; }
+
+/* Boucle agile */
+.step .agile { font: 500 10.5px/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--steel); padding: 4px 7px; border: 1px solid var(--line); justify-self: start; background: var(--white); transition: color .35s, border-color .35s, background .35s; }
+.step { transition: background .45s var(--ease), box-shadow .45s var(--ease); }
+.step::before { transition: color .35s; }
+html.anim .steps.cycling .step::before { color: var(--mist); }
+html.anim .steps.cycling .step.is-active { background: var(--white); box-shadow: inset 0 3px 0 var(--accent); }
+html.anim .steps.cycling .step.is-active::before { color: var(--accent); }
+html.anim .steps.cycling .step.is-active .agile { color: var(--white); background: var(--accent); border-color: var(--accent); }
+html.anim .steps .step.rv { transition: opacity .7s var(--ease), transform .7s var(--ease), background .45s var(--ease), box-shadow .45s var(--ease); }
+html.anim .steps { border-top-color: transparent; position: relative; }
+html.anim .steps::before { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: var(--anthracite); transform: scaleX(0); transform-origin: left center; transition: transform 1.2s var(--ease); }
+html.anim .steps.in::before { transform: scaleX(1); }
+
+.loop { position: relative; margin-top: 6px; height: 46px; }
+.loop svg { position: absolute; left: 10%; right: 10%; top: 0; width: 80%; height: 34px; overflow: visible; }
+.loop path { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 6; vector-effect: non-scaling-stroke; }
+.loop .head { position: absolute; left: calc(10% - 5px); top: -2px; width: 0; height: 0; border-inline: 5px solid transparent; border-bottom: 8px solid var(--accent); }
+.loop p { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); margin: 0; padding: 0 10px; background: var(--paper); font: 500 11px/1.4 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+@keyframes march { to { stroke-dashoffset: -24; } }
+html.anim .loop path { animation: march 1.2s linear infinite; }
+.agile-note { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.agile-note b { font: 500 11px/1.4 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--steel); margin-right: 4px; }
+.agile-note > span { font: 500 11.5px/1 var(--f-mono); padding: 7px 9px; border: 1px solid var(--line); background: var(--white); color: var(--anthracite); }
+
+@media screen and (max-width: 1080px) {
+  .loop { display: none; }
+}
+@media screen and (max-width: 880px) {
+  html.anim .imap.in .node .pulse { display: none; }
+  html.anim .imap .node.l, html.anim .imap .node.r { transform: translateY(12px); }
+  html.anim .imap.in .node.l, html.anim .imap.in .node.r { transform: none; }
+}
+@media print {
+  .node .pulse, .loop { display: none !important; }
+  html.anim .imap .hub, html.anim .imap .node { opacity: 1 !important; transform: none !important; animation: none !important; }
+  html.anim .imap .node::after { transform: none !important; }
+  html.anim .steps { border-top-color: var(--anthracite) !important; }
+  html.anim .steps::before { display: none; }
+  html.anim .steps.cycling .step::before { color: var(--accent) !important; }
+  .step { background: none !important; box-shadow: none !important; }
+  .step .agile { font-size: 6.4pt; padding: .6mm 1.2mm; color: var(--steel) !important; background: #fff !important; border-color: var(--line) !important; }
+  .imap-legend { display: none; }
+  .agile-note { margin-top: 2mm; gap: 1.2mm; }
+  .agile-note b, .agile-note > span { font-size: 6.8pt; padding: .8mm 1.4mm; }
+  .agile-note b { padding: 0; }
+}
+
 /* ------------------------------------------------------------------
    Impression A4 — « Download CV »
 ------------------------------------------------------------------- */
@@ -1121,15 +1196,18 @@ html[lang="en"] .team q { quotes: "“" "”"; }
       <div class="node l" style="--layer:var(--layer-c)"><b><span class="fr">Industrialisation</span><span class="en">Industrialisation</span></b><span><span class="fr">Interface conception / industrialisation, jusqu'aux outillages</span><span class="en">Design / industrialisation interface, through to tooling</span></span></div>
       <div class="node r" style="--layer:var(--layer-c)"><b><span class="fr">Équipes internationales</span><span class="en">International teams</span></b><span><span class="fr">5 architectes pilotés · équipe de conception au RNTBCI</span><span class="en">5 architects led · design team at RNTBCI</span></span></div>
     </div>
+    <p class="imap-legend"><i></i><span class="fr">Flux d'information : chaque interface converge vers la synthèse</span><span class="en">Information flow: every interface converges on the synthesis</span></p>
 
-    <p class="steps-title"><span class="fr">Méthode de pilotage — en 5 temps</span><span class="en">Leadership method — 5 stages</span></p>
+    <p class="steps-title"><span class="fr">Méthode de pilotage — une boucle agile en 5 temps</span><span class="en">Leadership method — an agile loop in 5 stages</span></p>
     <div class="steps">
-      <div class="step"><h3><span class="fr">Organiser</span><span class="en">Organise</span></h3><p><span class="fr">Staffing de l'équipe d'architectes, organisation et routines de travail.</span><span class="en">Staff the architect team, set up its organisation and working routines.</span></p></div>
-      <div class="step"><h3><span class="fr">Prioriser</span><span class="en">Prioritise</span></h3><p><span class="fr">Structurer l'architecture des sujets et prioriser les activités.</span><span class="en">Structure the architecture of topics and prioritise activities.</span></p></div>
-      <div class="step"><h3><span class="fr">Synchroniser</span><span class="en">Synchronise</span></h3><p><span class="fr">Animer et synchroniser les métiers autour d'une même cible.</span><span class="en">Facilitate and synchronise disciplines around a shared target.</span></p></div>
-      <div class="step"><h3><span class="fr">Converger</span><span class="en">Converge</span></h3><p><span class="fr">Challenger les constructions et valider les choix techniques.</span><span class="en">Challenge the designs and validate technical choices.</span></p></div>
-      <div class="step"><h3><span class="fr">Livrer</span><span class="en">Deliver</span></h3><p><span class="fr">Livrables aux jalons, reporting et suivi du statut des pièces (EO/RO).</span><span class="en">Milestone deliverables, reporting and part-status tracking (EO/RO).</span></p></div>
+      <div class="step"><h3><span class="fr">Organiser</span><span class="en">Organise</span></h3><span class="agile"><span class="fr">Rôles &amp; rituels</span><span class="en">Roles &amp; rituals</span></span><p><span class="fr">Staffing de l'équipe d'architectes, organisation et routines de travail.</span><span class="en">Staff the architect team, set up its organisation and working routines.</span></p></div>
+      <div class="step"><h3><span class="fr">Prioriser</span><span class="en">Prioritise</span></h3><span class="agile"><span class="fr">Backlog priorisé</span><span class="en">Prioritised backlog</span></span><p><span class="fr">Structurer l'architecture des sujets et prioriser les activités.</span><span class="en">Structure the architecture of topics and prioritise activities.</span></p></div>
+      <div class="step"><h3><span class="fr">Synchroniser</span><span class="en">Synchronise</span></h3><span class="agile"><span class="fr">Points de synchro</span><span class="en">Sync meetings</span></span><p><span class="fr">Animer et synchroniser les métiers autour d'une même cible.</span><span class="en">Facilitate and synchronise disciplines around a shared target.</span></p></div>
+      <div class="step"><h3><span class="fr">Converger</span><span class="en">Converge</span></h3><span class="agile"><span class="fr">Revue technique</span><span class="en">Technical review</span></span><p><span class="fr">Challenger les constructions et valider les choix techniques.</span><span class="en">Challenge the designs and validate technical choices.</span></p></div>
+      <div class="step"><h3><span class="fr">Livrer</span><span class="en">Deliver</span></h3><span class="agile"><span class="fr">Incrément au jalon</span><span class="en">Milestone increment</span></span><p><span class="fr">Livrables aux jalons, reporting et suivi du statut des pièces (EO/RO).</span><span class="en">Milestone deliverables, reporting and part-status tracking (EO/RO).</span></p></div>
     </div>
+    <div class="loop" aria-hidden="true"><svg viewBox="0 0 100 34" preserveAspectRatio="none"><path d="M100 0 V26 H0 V6"/></svg><i class="head"></i><p><span class="fr">↻ Itérer : rétrospective, amélioration continue, cycle suivant</span><span class="en">↻ Iterate: retrospective, continuous improvement, next cycle</span></p></div>
+    <div class="agile-note"><b><span class="fr">Cadre agile</span><span class="en">Agile framework</span></b><span>Scrum Master</span><span>Agile Relay Practitioner · Renault Group 2021</span><span><span class="fr">Suivi JIRA · 3DEXPERIENCE</span><span class="en">JIRA · 3DEXPERIENCE tracking</span></span></div>
 
     <p class="team-title"><span class="fr">Management &amp; esprit d'équipe</span><span class="en">Management &amp; team spirit</span></p>
     <div class="team">
@@ -1760,6 +1838,31 @@ html[lang="en"] .team q { quotes: "“" "”"; }
     each(".g-now", function (el, i) { el.style.left = n + "%"; if (i === 0) el.dataset.label = document.documentElement.lang === "en" ? "NOW" : "AUJ."; });
     each(".lang button", function (btn) { btn.addEventListener("click", function () { var f = document.querySelector(".g-now"); if (f) f.dataset.label = btn.dataset.lang === "en" ? "NOW" : "AUJ."; }); });
   })();
+  // Carte des interfaces : ordre d'apparition + points de flux vers le rôle pivot
+  each(".imap .node", function (n, i) {
+    n.style.setProperty("--n", i);
+    var dot = document.createElement("i"); dot.className = "pulse"; dot.setAttribute("aria-hidden", "true"); n.appendChild(dot);
+  });
+
+  // Méthode de pilotage : les étapes s'allument tour à tour (boucle agile) quand la section est visible
+  (function () {
+    var box = document.querySelector(".steps");
+    if (!box || !animated) return;
+    var steps = box.querySelectorAll(".step"), k = -1, timer = null;
+    function tick() {
+      each(".step.is-active", function (s) { s.classList.remove("is-active"); }, box);
+      k = (k + 1) % steps.length; steps[k].classList.add("is-active");
+    }
+    function start() { if (timer) return; box.classList.add("cycling"); tick(); timer = setInterval(tick, 1500); }
+    function stop() { clearInterval(timer); timer = null; }
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) setTimeout(start, 900); else stop(); });
+      }, { threshold: 0.35 }).observe(box);
+    }
+    window.addEventListener("beforeprint", function () { stop(); box.classList.remove("cycling"); each(".step", function (s) { s.classList.remove("is-active"); }, box); });
+  })();
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
 </script>
