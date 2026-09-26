@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alberto RAMOS — Ingénieur Mécanique Senior · Architecte Véhicule · Pilotage Technique</title>
+<meta name="description" content="Alberto RAMOS, ingénieur conception mécanique senior (20+ ans) : architecture véhicule et produit, CATIA V5/V6, 3DEXPERIENCE, pilotage technique et management d'équipes internationales dans l'automobile. Consultant freelance basé à Mantes-la-Jolie.">
+<meta name="keywords" content="Mechanical Design Engineer, Mechanical Engineer, Vehicle Architect, Vehicle Architecture, Automotive Engineer, Technical Project Manager, CATIA, 3DEXPERIENCE, Mechanical Design, Automotive Engineering, ingénieur mécanique, architecte véhicule, conception mécanique, freelance">
+<meta name="author" content="Alberto RAMOS">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E2E4D">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alberto RAMOS — Senior Mechanical Design Engineer · Vehicle Architect">
+<meta property="og:description" content="20+ ans d'ingénierie industrielle : architecture véhicule, conception mécanique, CATIA / 3DEXPERIENCE, pilotage technique et IA appliquée à l'ingénierie.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="profile:first_name" content="Alberto">
+<meta property="profile:last_name" content="Ramos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alberto RAMOS — Senior Mechanical Design Engineer · Vehicle Architect">
+<meta name="twitter:description" content="Vehicle & product architecture, mechanical design, CATIA / 3DEXPERIENCE, technical project leadership.">
+
+<!-- Schema.org Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alberto RAMOS",
+  "givenName": "Alberto",
+  "familyName": "Ramos",
+  "jobTitle": "Senior Mechanical Design Engineer — Vehicle & Product Architecture — Technical Project Lead",
+  "description": "Ingénieur mécanique senior avec plus de 20 ans d'expérience industrielle : conception mécanique, architecture produit et véhicule, synthèse technique, pilotage de projets et d'équipes pluridisciplinaires.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Mantes-la-Jolie", "addressCountry": "FR" },
+  "email": "mailto:alberto.ramos78@gmail.com",
+  "telephone": "+33767606874",
+  "sameAs": ["https://www.linkedin.com/in/alberto-ramos-3582b5258/"],
+  "knowsAbout": ["Mechanical Design", "Mechanical Engineering", "Vehicle Architecture", "Product Architecture", "Automotive Engineering", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "Technical Project Management", "Team Management", "Patents", "Crédit Impôt Recherche", "Excel VBA", "Generative AI", "Prompt Engineering", "Claude Code"],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "French" },
+    { "@type": "Language", "name": "English" },
+    { "@type": "Language", "name": "Portuguese" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Université Henri Poincaré Nancy 1 — InSIC" },
+    { "@type": "CollegeOrUniversity", "name": "Université de Reims — IFTS" }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Master 2 Design Produit – Conception, option Prototypage rapide", "credentialCategory": "degree" },
+    { "@type": "EducationalOccupationalCredential", "name": "Licence et Master 1 Génie des Matériaux — Mention Ingénieur Maître", "credentialCategory": "degree" },
+    { "@type": "EducationalOccupationalCredential", "name": "SKIPPER GenAI", "recognizedBy": { "@type": "Organization", "name": "Renault Group" } },
+    { "@type": "EducationalOccupationalCredential", "name": "Agile Relay Practitioner", "recognizedBy": { "@type": "Organization", "name": "Renault Group" } }
+  ],
+  "worksFor": { "@type": "Organization", "name": "Duvia™", "url": "https://duvia.fr" }
+}
+</script>
+
+<script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* ------------------------------------------------------------------
+   Tokens — anthracite / blanc / gris acier, accent « bleu de cote »
+   (la couleur des lignes de cote sur un plan technique)
+------------------------------------------------------------------- */
+:root {
+  --anthracite: #1B1E21;
+  --graphite:   #262A2E;
+  --ink:        #1F2327;
+  --steel:      #5B636B;
+  --mist:       #9AA1A8;
+  --line:       #DCDFE2;
+  --line-dark:  #3A4046;
+  --paper:      #F4F5F6;
+  --white:      #FFFFFF;
+  --accent:     #3E6E8F;
+  --accent-lt:  #8FB3CC;
+
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body:    "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --maxw: 1180px;
+  --radius: 2px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font: 400 16px/1.65 var(--f-body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* Bilingue : le contenu FR et EN coexiste, la langue active masque l'autre */
+html[lang="fr"] .en { display: none !important; }
+html[lang="en"] .fr { display: none !important; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+.mono { font-family: var(--f-mono); }
+.label {
+  font: 500 11.5px/1.4 var(--f-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* ------------------------------------------------------------------
+   Barre de navigation
+------------------------------------------------------------------- */
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: rgba(27, 30, 33, .94);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--line-dark);
+  color: var(--white);
+}
+.topbar .wrap { display: flex; align-items: center; gap: 24px; min-height: 60px; }
+.brand { font: 500 13px/1 var(--f-mono); letter-spacing: .16em; text-decoration: none; white-space: nowrap; }
+.brand b { font-weight: 500; color: var(--accent-lt); }
+.nav { display: flex; gap: 22px; margin-left: auto; }
+.nav a { font-size: 13.5px; text-decoration: none; color: #C9CED3; transition: color .15s; }
+.nav a:hover { color: var(--white); }
+.tools { display: flex; align-items: center; gap: 12px; }
+.lang {
+  display: inline-flex; border: 1px solid var(--line-dark); border-radius: var(--radius);
+  font: 500 12px/1 var(--f-mono); letter-spacing: .08em;
+}
+.lang button {
+  appearance: none; border: 0; background: transparent; color: var(--mist);
+  padding: 8px 10px; cursor: pointer; font: inherit; letter-spacing: inherit;
+}
+.lang button[aria-pressed="true"] { background: var(--white); color: var(--anthracite); }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 500 13.5px/1 var(--f-body); text-decoration: none; cursor: pointer;
+  padding: 12px 18px; border-radius: var(--radius); border: 1px solid transparent;
+  transition: background .15s, color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.btn svg { width: 15px; height: 15px; flex: none; }
+.btn-light { background: var(--white); color: var(--anthracite); }
+.btn-light:hover { background: #E4E8EB; }
+.btn-ghost { background: transparent; color: var(--white); border-color: #59616A; }
+.btn-ghost:hover { border-color: var(--white); }
+.btn-dark { background: var(--anthracite); color: var(--white); }
+.btn-dark:hover { background: var(--accent); }
+.btn-outline { background: transparent; color: var(--anthracite); border-color: var(--anthracite); }
+.btn-outline:hover { background: var(--anthracite); color: var(--white); }
+.topbar .btn { padding: 9px 14px; font-size: 13px; }
+
+/* ------------------------------------------------------------------
+   HERO — fond de plan, cartouche
+------------------------------------------------------------------- */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--anthracite); color: var(--white);
+  padding-block: clamp(56px, 9vw, 112px) clamp(48px, 7vw, 88px);
+}
+.hero::before { /* quadrillage de planche à dessin, très discret */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  mask-image: linear-gradient(100deg, transparent 20%, #000 75%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 20%, #000 75%);
+}
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: end; }
+.hero .label { color: var(--accent-lt); display: flex; align-items: center; gap: 12px; }
+.hero .label::before { content: ""; width: 28px; height: 1px; background: var(--accent-lt); }
+.hero h1 {
+  margin-top: 26px;
+  font-size: clamp(44px, 5.6vw, 80px); white-space: nowrap;
+  font-weight: 800; font-stretch: 112%;
+  line-height: .9; letter-spacing: -.02em;
+}
+.roles { margin-top: 26px; display: grid; gap: 4px; }
+.roles span {
+  font: 500 clamp(17px, 1.9vw, 22px)/1.3 var(--f-display); font-stretch: 88%;
+  letter-spacing: .01em; color: #E6E9EC;
+}
+.roles span:nth-child(n+2) { color: var(--mist); }
+.thesis {
+  margin-top: 30px; max-width: 34ch;
+  font: 400 clamp(19px, 2.1vw, 24px)/1.45 var(--f-body);
+  color: #D7DBDF;
+  border-left: 1px solid var(--accent-lt); padding-left: 20px;
+}
+.hero-cta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Cartouche façon plan technique */
+.cartouche { border: 1px solid #4A525A; font-family: var(--f-mono); background: rgba(27,30,33,.6); }
+.cartouche-head {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid #4A525A;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mist);
+}
+.cartouche dl { margin: 0; display: grid; grid-template-columns: auto 1fr; }
+.cartouche dt, .cartouche dd { margin: 0; padding: 13px 16px; border-bottom: 1px solid #353B41; }
+.cartouche dt { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); border-right: 1px solid #353B41; white-space: nowrap; }
+.cartouche dd { font: 500 14.5px/1.35 var(--f-body); color: var(--white); }
+.cartouche dd.big { font: 700 26px/1 var(--f-display); font-stretch: 105%; }
+.cartouche dl > :nth-last-child(-n+2) { border-bottom: 0; }
+
+/* ------------------------------------------------------------------
+   Sections
+------------------------------------------------------------------- */
+section { padding-block: clamp(64px, 8vw, 104px); }
+section + section { border-top: 1px solid var(--line); }
+.alt { background: var(--paper); }
+.sec-head { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; margin-bottom: clamp(32px, 4vw, 52px); align-items: baseline; }
+.sec-head .label { color: var(--accent); }
+.sec-head h2 {
+  font-size: clamp(30px, 4vw, 46px); font-weight: 700; font-stretch: 100%;
+  line-height: 1.05; letter-spacing: -.015em; color: var(--anthracite);
+}
+.sec-body { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
+.sec-body > .side { color: var(--steel); font-size: 14px; }
+
+/* Profil */
+.lead { font-size: clamp(19px, 1.9vw, 22px); line-height: 1.55; color: var(--anthracite); max-width: 62ch; }
+.prose { display: grid; gap: 16px; max-width: 64ch; color: #3A4046; }
+.facts { margin-top: 44px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--anthracite); }
+.fact { padding: 20px 20px 0 0; display: grid; gap: 6px; }
+.fact + .fact { padding-left: 20px; border-left: 1px solid var(--line); }
+.fact strong { font: 700 clamp(30px, 3.4vw, 40px)/1 var(--f-display); font-stretch: 105%; color: var(--anthracite); }
+.fact strong.txt-fact { font-size: clamp(20px, 2vw, 24px); font-stretch: 95%; line-height: 1.15; padding-block: 6px 4px; }
+.fact span { font-size: 14px; color: var(--steel); line-height: 1.45; }
+
+/* Expertise */
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--anthracite); }
+.pillar { padding: 26px 24px 8px 0; display: grid; gap: 14px; align-content: start; }
+.pillar + .pillar { padding-left: 24px; border-left: 1px solid var(--line); }
+.pillar h3 { font-size: 19px; font-weight: 600; font-stretch: 92%; line-height: 1.2; color: var(--anthracite); }
+.pillar li { font-size: 14.5px; color: #3A4046; padding-left: 16px; position: relative; line-height: 1.5; }
+.pillar li + li { margin-top: 7px; }
+.pillar li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 1px; background: var(--accent); }
+.pillar .label { font-size: 10.5px; }
+
+.split { margin-top: 52px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.split h3 { font: 500 11.5px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin-bottom: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-size: 13.5px; line-height: 1; padding: 9px 12px;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); color: var(--anthracite);
+}
+.chip.strong { border-color: var(--anthracite); }
+
+/* Expérience */
+.xp-group + .xp-group { margin-top: 56px; }
+.xp-group > .label { display: block; margin-bottom: 18px; }
+.xp { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding-block: 30px; border-top: 1px solid var(--line); }
+.xp:first-of-type { border-top-color: var(--anthracite); }
+.xp-when { font: 500 13px/1.5 var(--f-mono); color: var(--steel); }
+.xp-when b { display: block; font-weight: 500; color: var(--anthracite); font-size: 14px; }
+.xp h3 { font-size: clamp(21px, 2.2vw, 25px); font-weight: 650; font-stretch: 95%; line-height: 1.2; color: var(--anthracite); }
+.xp-org { margin-top: 6px; font-size: 14.5px; color: var(--steel); }
+.xp-org strong { color: var(--anthracite); font-weight: 600; letter-spacing: .04em; }
+.xp-cols { margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 36px; }
+.xp-cols li { font-size: 14.8px; color: #3A4046; padding-left: 16px; position: relative; line-height: 1.5; }
+.xp-cols li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 1px; background: var(--accent); }
+.xp-env { margin-top: 20px; font: 400 12.5px/1.6 var(--f-mono); color: var(--steel); }
+.xp-env span { color: var(--anthracite); }
+.quote {
+  margin: 22px 0 0; padding: 16px 20px; background: var(--paper);
+  border-left: 2px solid var(--accent);
+  font-size: 15px; line-height: 1.55; color: var(--anthracite); max-width: 70ch;
+}
+.quote cite { display: block; margin-top: 8px; font: 400 11.5px/1.4 var(--f-mono); letter-spacing: .06em; color: var(--steel); font-style: normal; }
+.quotes { margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.quotes .quote { margin-top: 0; max-width: none; font-size: 14.5px; }
+
+/* Projets clés */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.project {
+  position: relative; display: grid; align-content: start; gap: 22px;
+  padding: clamp(26px, 3vw, 40px);
+  background: var(--anthracite); color: var(--white);
+  border-radius: var(--radius); overflow: hidden;
+}
+.project::after { /* repères d'angle de plan */
+  content: ""; position: absolute; inset: 12px; pointer-events: none;
+  background:
+    linear-gradient(var(--accent-lt), var(--accent-lt)) top left / 14px 1px no-repeat,
+    linear-gradient(var(--accent-lt), var(--accent-lt)) top left / 1px 14px no-repeat,
+    linear-gradient(var(--accent-lt), var(--accent-lt)) bottom right / 14px 1px no-repeat,
+    linear-gradient(var(--accent-lt), var(--accent-lt)) bottom right / 1px 14px no-repeat;
+  opacity: .7;
+}
+.project.light { background: var(--white); color: var(--anthracite); border: 1px solid var(--anthracite); }
+.project .ref { display: flex; justify-content: space-between; gap: 12px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.project.light .ref { color: var(--steel); }
+.project h3 { font-size: clamp(34px, 4.2vw, 50px); font-weight: 800; font-stretch: 110%; line-height: .95; letter-spacing: -.02em; }
+.project .sub { font-size: 16px; color: #C9CED3; max-width: 44ch; margin-top: -8px; }
+.project.light .sub { color: var(--steel); }
+.project dl { margin: 0; display: grid; gap: 0; border-top: 1px solid #454C53; }
+.project.light dl { border-top-color: var(--line); }
+.project dl div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; padding-block: 13px; border-bottom: 1px solid #353B41; }
+.project.light dl div { border-bottom-color: var(--line); }
+.project dt { font: 500 10.5px/1.6 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.project.light dt { color: var(--steel); }
+.project dd { margin: 0; font-size: 14.5px; line-height: 1.5; }
+.site-link { font: 500 12.5px/1.4 var(--f-mono); letter-spacing: .04em; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; justify-self: start; }
+.site-link:hover { color: var(--anthracite); }
+.project:not(.light) .site-link { color: var(--accent-lt); }
+.project:not(.light) .site-link:hover { color: var(--white); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font: 500 11.5px/1 var(--f-mono); letter-spacing: .04em; padding: 7px 9px; border: 1px solid #59616A; border-radius: var(--radius); color: #E6E9EC; }
+.project.light .tag { border-color: var(--line); color: var(--anthracite); }
+
+/* Compétences */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--anthracite); }
+.skillset { padding: 24px 24px 28px 0; border-bottom: 1px solid var(--line); }
+.skillset:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--line); }
+.skillset h3 { font-size: 17px; font-weight: 600; font-stretch: 92%; color: var(--anthracite); margin-bottom: 14px; }
+
+/* IA */
+.ai { background: var(--graphite); color: var(--white); }
+.ai .sec-head h2 { color: var(--white); }
+.ai .sec-head .label { color: var(--accent-lt); }
+.ai .lead { color: #E6E9EC; }
+.ai-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #59616A; }
+.ai-item { padding: 24px 24px 0 0; display: grid; gap: 10px; align-content: start; }
+.ai-item + .ai-item { padding-left: 24px; border-left: 1px solid #3F464C; }
+.ai-item .label { color: var(--accent-lt); }
+.ai-item h3 { font-size: 20px; font-weight: 600; font-stretch: 92%; line-height: 1.25; }
+.ai-item p { font-size: 14.8px; color: #C9CED3; line-height: 1.55; }
+.ai .tags { margin-top: 36px; }
+
+/* Formation / certifications / langues */
+.trio { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: clamp(28px, 4vw, 56px); }
+.trio h2 { font-size: 26px; font-weight: 700; color: var(--anthracite); margin: 10px 0 22px; }
+.trio .label { color: var(--accent); }
+.entry { padding-block: 16px; border-top: 1px solid var(--line); }
+.entry:first-of-type { border-top-color: var(--anthracite); }
+.entry strong { display: block; font-weight: 600; color: var(--anthracite); line-height: 1.4; }
+.entry span { display: block; font-size: 14px; color: var(--steel); margin-top: 3px; }
+.entry .mono { font-size: 12.5px; color: var(--anthracite); margin-top: 6px; }
+.lvl { display: flex; gap: 3px; margin-top: 10px; }
+.lvl i { width: 22px; height: 3px; background: var(--line); }
+.lvl i.on { background: var(--anthracite); }
+
+/* Contact */
+.contact { background: var(--anthracite); color: var(--white); }
+.contact .wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: end; }
+.contact h2 { font-size: clamp(34px, 5vw, 60px); font-weight: 800; font-stretch: 108%; line-height: 1; letter-spacing: -.02em; }
+.contact p { margin-top: 20px; font-size: 18px; color: #C9CED3; max-width: 46ch; }
+.contact .hero-cta { margin-top: 32px; }
+.contact .cartouche dd a { color: var(--white); text-decoration-color: var(--accent-lt); text-underline-offset: 3px; }
+
+footer { background: var(--anthracite); color: var(--mist); border-top: 1px solid var(--line-dark); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 22px; font: 400 12px/1.4 var(--f-mono); letter-spacing: .06em; }
+
+/* ------------------------------------------------------------------
+   Responsive
+------------------------------------------------------------------- */
+@media screen and (max-width: 1080px) {
+  .nav { display: none; }
+  .tools { margin-left: auto; }
+  .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pillar:nth-child(3) { padding-left: 0; border-left: 0; }
+  .pillar:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 18px; }
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skillset:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .skillset:nth-child(2n) { padding-left: 24px; border-left: 1px solid var(--line); }
+  .quotes { grid-template-columns: minmax(0, 1fr); }
+}
+@media screen and (max-width: 880px) {
+  .hero .wrap, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .sec-head, .sec-body, .xp { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .sec-body > .side { display: none; }
+  .projects, .split { grid-template-columns: minmax(0, 1fr); }
+  .ai-grid { grid-template-columns: minmax(0, 1fr); }
+  .ai-item + .ai-item { padding-left: 0; border-left: 0; border-top: 1px solid #3F464C; margin-top: 24px; }
+  .trio { grid-template-columns: minmax(0, 1fr); }
+}
+@media screen and (max-width: 620px) {
+  body { font-size: 15.5px; }
+  .brand { font-size: 12px; letter-spacing: .1em; }
+  .brand-sub { display: none; }
+  .topbar .wrap { gap: 12px; }
+  .topbar .btn .txt { display: none; }
+  .topbar .btn { padding: 9px 11px; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .fact, .fact + .fact { padding: 18px 0; border-left: 0; }
+  .fact + .fact { border-top: 1px solid var(--line); }
+  .pillars, .skills { grid-template-columns: minmax(0, 1fr); }
+  .pillar, .pillar + .pillar { padding-left: 0; border-left: 0; }
+  .pillar + .pillar { border-top: 1px solid var(--line); margin-top: 18px; }
+  .skillset, .skillset:nth-child(2n) { padding-left: 0; border-left: 0; }
+  .xp-cols { grid-template-columns: minmax(0, 1fr); }
+  .project dl div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .cartouche dl { grid-template-columns: minmax(0, 1fr); }
+  .cartouche dt { border-right: 0; border-bottom: 0; padding-bottom: 2px; }
+  .cartouche dd { padding-top: 0; }
+  .cartouche dl > :nth-last-child(2) { border-bottom: 0; }
+}
+
+/* ------------------------------------------------------------------
+   V4 — Animations (couche progressive : sans JS ou avec
+   « réduire les animations », la page s'affiche telle quelle)
+------------------------------------------------------------------- */
+:root { --ease: cubic-bezier(.2, .7, .2, 1); }
+
+/* Barre de progression de lecture, sous la navigation */
+.progress {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--accent-lt); transform-origin: left center; transform: scaleX(0);
+  pointer-events: none;
+}
+.nav a { position: relative; }
+.nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px;
+  background: var(--accent-lt); transform: scaleX(0); transform-origin: left center;
+  transition: transform .35s var(--ease);
+}
+.nav a.on { color: var(--white); }
+.nav a.on::after, .nav a:hover::after { transform: scaleX(1); }
+
+/* Survols */
+.btn { transition: background .15s, color .15s, border-color .15s, transform .2s var(--ease); }
+.btn:hover { transform: translateY(-1px); }
+.btn svg { transition: transform .25s var(--ease); }
+a.btn:hover svg { transform: translateX(3px); }
+.chip { transition: border-color .2s, background .2s; }
+.chip:hover { border-color: var(--anthracite); }
+.project { transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
+.project:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(27, 30, 33, .45); }
+.project::after { transition: opacity .3s; }
+.project:hover::after { opacity: 1; }
+.pillar li::before, .xp-cols li::before { transition: transform .3s var(--ease); transform-origin: left center; }
+.pillar li:hover::before, .xp-cols li:hover::before { transform: scaleX(1.8); }
+
+/* --- Séquence d'ouverture du hero --- */
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes plot { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes stroke { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes stroke-y { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+.hero h1 .ln { display: block; overflow: hidden; padding-bottom: .04em; margin-bottom: -.04em; }
+.hero h1 .ln-i { display: block; }
+
+html.anim .hero .label { animation: fade .6s var(--ease) both .1s; }
+html.anim .hero .label::before { transform-origin: left center; animation: stroke .7s var(--ease) both .15s; }
+html.anim .hero h1 .ln-i { animation: rise 1s var(--ease) both; animation-delay: calc(.25s + var(--i, 0) * .12s); }
+html.anim .roles span { animation: fadeUp .7s var(--ease) both; animation-delay: calc(.6s + var(--i, 0) * .09s); }
+html.anim .thesis { position: relative; border-left-color: transparent; animation: fadeUp .8s var(--ease) both .9s; }
+html.anim .thesis::before {
+  content: ""; position: absolute; left: -1px; top: 0; bottom: 0; width: 1px; background: var(--accent-lt);
+  transform-origin: top center; animation: stroke-y .9s var(--ease) both 1s;
+}
+html.anim .hero-cta > * { animation: fadeUp .7s var(--ease) backwards; animation-delay: calc(1.1s + var(--i, 0) * .08s); }
+html.anim .hero .cartouche { animation: fade .6s var(--ease) both .45s; }
+html.anim .hero .cartouche-head { animation: plot .6s var(--ease) both .55s; }
+html.anim .hero .cartouche dt,
+html.anim .hero .cartouche dd { animation: plot .7s var(--ease) both; animation-delay: calc(.7s + var(--i, 0) * .11s); }
+
+/* --- Apparition au défilement --- */
+html.anim .rv {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+html.anim .rv.in { opacity: 1; transform: none; }
+html.anim .chips.rv, html.anim .facts.rv, html.anim .pillars.rv, html.anim .skills.rv { opacity: 1; transform: none; }
+html.anim .chips .rv { transform: translateY(8px); transition-duration: .5s; transition-delay: calc(var(--i, 0) * 35ms); }
+
+/* Traits de structure qui se « tracent » */
+html.anim .facts, html.anim .pillars, html.anim .skills { border-top-color: transparent; position: relative; }
+html.anim .facts::before, html.anim .pillars::before, html.anim .skills::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--anthracite);
+  transform: scaleX(0); transform-origin: left center; transition: transform 1.1s var(--ease);
+}
+html.anim .facts.in::before, html.anim .pillars.in::before, html.anim .skills.in::before { transform: scaleX(1); }
+
+/* Jauges de langue */
+html.anim .lvl i.on { transform: scaleX(0); transform-origin: left center; transition: transform .5s var(--ease); }
+html.anim .entry.in .lvl i.on { transform: scaleX(1); }
+html.anim .entry.in .lvl i:nth-child(2) { transition-delay: .08s; }
+html.anim .entry.in .lvl i:nth-child(3) { transition-delay: .16s; }
+html.anim .entry.in .lvl i:nth-child(4) { transition-delay: .24s; }
+html.anim .entry.in .lvl i:nth-child(5) { transition-delay: .32s; }
+
+.count { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  .progress { display: none; }
+  .project:hover, .btn:hover { transform: none; }
+}
+@media print {
+  .progress { display: none !important; }
+  html.anim .rv, html.anim .hero *, html.anim .lvl i.on, html.anim .rv * { opacity: 1 !important; transform: none !important; clip-path: none !important; animation: none !important; transition: none !important; }
+  html.anim .facts, html.anim .pillars, html.anim .skills { border-top-color: var(--anthracite) !important; }
+  html.anim .facts::before, html.anim .pillars::before, html.anim .skills::before, html.anim .thesis::before { display: none !important; }
+  html.anim .thesis { border-left-color: var(--accent) !important; }
+}
+
+/* ------------------------------------------------------------------
+   V5 — Technique & couleur
+   Bleu plan, traits cyan, cotes orange sécurité ; chaque domaine
+   d'expertise porte la couleur de son « calque » CAO.
+------------------------------------------------------------------- */
+:root {
+  --anthracite: #0F263D;
+  --graphite:   #133152;
+  --ink:        #172635;
+  --steel:      #506579;
+  --mist:       #93A8BC;
+  --line:       #D3DDE7;
+  --line-dark:  #2A4B6C;
+  --paper:      #EFF4F8;
+  --accent:     #C4561A;   /* orange lisible sur blanc */
+  --accent-lt:  #FF8A3D;   /* orange sur fond bleu */
+  --blueprint:  #0E2E4D;
+  --cyan:       #6CC3F0;
+  --layer-a:    #2F7FE0;   /* architecture */
+  --layer-b:    #E0661C;   /* conception */
+  --layer-c:    #17A077;   /* pilotage */
+  --layer-d:    #C99A06;   /* méthodes & IA */
+  --layer-e:    #8B5CF0;   /* innovation */
+}
+
+/* Barre du haut et progression */
+.topbar { background: rgba(14, 46, 77, .95); border-bottom-color: #25486B; }
+.brand b { color: var(--accent-lt); }
+.progress, .nav a::after { background: var(--accent-lt); }
+
+/* --- HERO : planche bleue --- */
+.hero { background: var(--blueprint); }
+.hero::before {
+  background-image:
+    linear-gradient(to right, rgba(108,195,240,.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(108,195,240,.10) 1px, transparent 1px),
+    linear-gradient(to right, rgba(108,195,240,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(108,195,240,.045) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  mask-image: linear-gradient(100deg, rgba(0,0,0,.35) 10%, #000 70%);
+  -webkit-mask-image: linear-gradient(100deg, rgba(0,0,0,.35) 10%, #000 70%);
+}
+.hero .label { color: var(--cyan); }
+.hero .label::before { background: var(--cyan); }
+.roles span { color: #EAF4FB; }
+.roles span:nth-child(n+2) { color: #9FC3DD; }
+.thesis { color: #D4E4F0; border-left-color: var(--accent-lt); }
+html.anim .thesis::before { background: var(--accent-lt); }
+.btn-light { background: var(--accent-lt); color: #1A0E05; }
+.btn-light:hover { background: #FFA466; }
+.btn-ghost { border-color: #4F7599; }
+
+/* Cadre de plan : repères de zone 1–8 / A–D */
+.frame { position: absolute; inset: 12px; border: 1px solid rgba(108,195,240,.28); pointer-events: none; }
+.fr-top, .fr-left { position: absolute; font: 500 9.5px/1 var(--f-mono); color: rgba(108,195,240,.7); letter-spacing: .1em; }
+.fr-top { top: 0; left: 18px; right: 0; height: 18px; display: grid; grid-template-columns: repeat(8, 1fr); border-bottom: 1px solid rgba(108,195,240,.22); }
+.fr-left { top: 18px; left: 0; bottom: 0; width: 18px; display: grid; grid-template-rows: repeat(4, 1fr); border-right: 1px solid rgba(108,195,240,.22); }
+.fr-top span, .fr-left span { display: grid; place-items: center; }
+.fr-top span + span { border-left: 1px solid rgba(108,195,240,.22); }
+.fr-left span + span { border-top: 1px solid rgba(108,195,240,.22); }
+
+/* Ligne de cote sous le nom */
+.name-block { display: inline-grid; max-width: 100%; }
+.dim { position: relative; margin-top: 14px; height: 16px; display: grid; place-items: center; }
+.dim::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--accent-lt); }
+.dim i { position: absolute; top: 50%; width: 0; height: 0; border-block: 4px solid transparent; transform: translateY(-50%); }
+.dim i:first-child { left: 0; border-right: 8px solid var(--accent-lt); }
+.dim i:last-child { right: 0; border-left: 8px solid var(--accent-lt); }
+.dim span { position: relative; padding: 0 10px; background: var(--blueprint); font: 500 11px/1 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-lt); }
+.dim::after { content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; border-inline: 1px solid var(--accent-lt); }
+html.anim .dim { animation: fade .6s var(--ease) both 1s; }
+html.anim .dim::before { transform-origin: center; animation: stroke .9s var(--ease) both 1.05s; }
+
+/* Cartouche */
+.cartouche { border-color: #3C6A94; background: rgba(9, 32, 55, .72); }
+.cartouche-head { border-color: #3C6A94; color: var(--cyan); }
+.cartouche dt, .cartouche dd { border-color: #24476A; }
+.cartouche dt { color: #8FB5D3; border-right-color: #24476A; }
+.cartouche dd.big { color: var(--accent-lt); }
+
+/* --- Sections : références de dossier --- */
+main { counter-reset: sec; }
+.sec-head { counter-increment: sec; }
+.sec-head .label { color: var(--accent); }
+.sec-head .label::before { content: "REF. " counter(sec, decimal-leading-zero) "  ·  "; color: var(--steel); white-space: pre; }
+.alt { background: var(--paper); }
+.fact strong { color: var(--anthracite); }
+.fact:first-child strong, .fact:nth-child(2) strong { color: var(--accent); }
+
+/* Calques d'expertise */
+.pillar:nth-child(1) { --layer: var(--layer-a); }
+.pillar:nth-child(2) { --layer: var(--layer-b); }
+.pillar:nth-child(3) { --layer: var(--layer-c); }
+.pillar:nth-child(4) { --layer: var(--layer-d); }
+.pillar { position: relative; }
+.pillar::before { content: ""; position: absolute; left: 0; right: 24px; top: -1px; height: 3px; background: var(--layer); }
+.pillar + .pillar::before { left: 24px; }
+.pillar .label { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.pillar .label::before { content: ""; width: 10px; height: 10px; background: var(--layer); }
+.pillar .label span { color: var(--steel); }
+.pillar li::before { background: var(--layer); height: 2px; }
+
+.skillset:nth-child(1) { --layer: var(--layer-b); }
+.skillset:nth-child(2) { --layer: var(--layer-a); }
+.skillset:nth-child(3) { --layer: var(--layer-c); }
+.skillset:nth-child(4) { --layer: var(--layer-d); }
+.skillset:nth-child(5) { --layer: var(--layer-e); }
+.skillset:nth-child(6) { --layer: var(--layer-d); }
+.skillset h3 { display: flex; align-items: center; gap: 10px; }
+.skillset h3::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--layer); }
+.skillset .chip.strong, .split .chip.strong { display: inline-flex; align-items: center; gap: 8px; }
+.skillset .chip.strong::before, .split .chip.strong::before { content: ""; width: 7px; height: 7px; flex: none; background: var(--layer, var(--accent)); }
+
+
+/* --- Frise des missions (Gantt) --- */
+.gantt { margin-bottom: 48px; border: 1px solid var(--line); background: var(--paper); padding: 18px 20px 14px; }
+.g-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
+.g-grid { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 10px 16px; align-items: center; }
+.g-lbl { font: 500 12px/1.3 var(--f-mono); color: var(--ink); }
+.g-lbl small { display: block; color: var(--steel); font-size: 10.5px; letter-spacing: .06em; }
+.g-track { position: relative; height: 22px; background:
+  repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px 20%); }
+.g-bar { position: absolute; top: 3px; bottom: 3px; border-radius: 1px; background: var(--c, var(--layer-a)); }
+.g-row { display: contents; }
+.g-txt { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font: 500 10px/1 var(--f-mono); color: #fff; white-space: nowrap; letter-spacing: .04em; }
+.g-axis { grid-column: 2; position: relative; display: grid; grid-template-columns: repeat(5, 1fr); font: 500 10.5px/1 var(--f-mono); color: var(--steel); padding-top: 4px; }
+.g-axis span { padding-left: 4px; border-left: 1px solid var(--line); }
+.g-bar.short .g-txt { left: auto; right: calc(100% + 8px); color: var(--ink); }
+.g-now { position: absolute; top: -6px; bottom: -6px; width: 0; border-left: 1.5px dashed var(--accent); }
+.g-now::before { content: attr(data-label); position: absolute; top: -14px; left: -14px; font: 500 9.5px/1 var(--f-mono); letter-spacing: .1em; color: var(--accent); }
+.g-tracks { grid-column: 2; grid-row: 1 / span 3; position: relative; pointer-events: none; }
+html.anim .g-bar { transform: scaleX(0); transform-origin: left center; transition: transform 1s var(--ease); }
+html.anim .gantt.in .g-bar { transform: scaleX(1); }
+html.anim .gantt.in .g-row:nth-of-type(2) .g-bar { transition-delay: .15s; }
+html.anim .gantt.in .g-row:nth-of-type(3) .g-bar { transition-delay: .3s; }
+
+.xp:first-of-type { border-top-color: var(--anthracite); }
+.xp-when b { color: var(--anthracite); }
+.xp[data-c] .xp-when b::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 8px; background: var(--c); vertical-align: -1px; }
+.quote { position: relative; background: var(--white); border: 1px solid var(--line); }
+.quote::before { content: ""; position: absolute; left: -1px; top: -1px; width: 32px; height: 3px; background: var(--accent); }
+
+/* --- Projets --- */
+.project { background: var(--blueprint); }
+.project:not(.light) {
+  background-image:
+    linear-gradient(to right, rgba(108,195,240,.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(108,195,240,.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.project::after { opacity: 1; }
+.project:not(.light)::after {
+  background:
+    linear-gradient(var(--cyan), var(--cyan)) top left / 14px 1px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) top left / 1px 14px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) bottom right / 14px 1px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) bottom right / 1px 14px no-repeat;
+}
+.project:not(.light) .ref { color: var(--cyan); }
+.project:not(.light) .tag { border-color: rgba(255,138,61,.6); color: #FFE3D0; }
+.project.light { border-color: var(--anthracite); border-top: 4px solid var(--layer-c); }
+.project.light .tag { border-color: var(--line); }
+.project.light h3 { color: var(--anthracite); }
+
+/* --- IA --- */
+.ai { background: var(--graphite); position: relative; }
+.ai::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(108,195,240,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(108,195,240,.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.ai .wrap { position: relative; }
+.ai .sec-head .label, .ai-item .label { color: var(--accent-lt); }
+.ai .sec-head .label::before { color: var(--mist); }
+.ai-item:nth-child(1) { --layer: var(--layer-d); }
+.ai-item:nth-child(2) { --layer: var(--layer-a); }
+.ai-item:nth-child(3) { --layer: var(--layer-c); }
+.ai-item { position: relative; }
+.ai-item::before { content: ""; position: absolute; top: -1px; left: 0; width: 48px; height: 3px; background: var(--layer); }
+.ai-item + .ai-item::before { left: 24px; }
+.ai .tag { border-color: rgba(108,195,240,.45); color: #D9EEFB; }
+
+/* --- Formation / langues --- */
+.trio .label { color: var(--accent); }
+.lvl i.on { background: var(--layer-a); }
+
+/* --- Contact --- */
+.contact { background: var(--blueprint); position: relative; }
+.contact::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(108,195,240,.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(108,195,240,.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.contact .wrap { position: relative; }
+.contact .label { color: var(--accent-lt) !important; }
+.contact .cartouche dd a { text-decoration-color: var(--accent-lt); }
+footer { background: #0A2239; border-top-color: #25486B; }
+
+@media screen and (max-width: 880px) {
+  .g-grid { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .g-axis, .g-tracks { grid-column: 1; }
+  .g-row .g-track { margin-bottom: 8px; }
+}
+@media screen and (max-width: 620px) {
+  .frame { display: none; }
+  .pillar::before, .pillar + .pillar::before { left: 0; right: 0; }
+  .ai-item + .ai-item::before { left: 0; }
+}
+
+@media print {
+  .frame { display: none !important; }
+  .dim span { background: #fff; color: var(--accent); }
+  .dim::before, .dim::after { background: var(--accent); border-color: var(--accent); }
+  .dim i:first-child { border-right-color: var(--accent); }
+  .dim i:last-child { border-left-color: var(--accent); }
+  .dim { margin-top: 2mm; }
+  .hero .label { color: var(--accent) !important; }
+  .roles span { color: var(--anthracite) !important; }
+  .cartouche dd.big { color: var(--accent) !important; }
+  .cartouche dt { color: var(--steel) !important; }
+  .cartouche-head { color: var(--steel) !important; }
+  .ai::before, .contact::before { display: none; }
+  .project:not(.light) { background-image: none !important; }
+  .project:not(.light) .ref { color: var(--steel) !important; }
+  .project.light { border-top-width: 1px; }
+  .gantt { margin-bottom: 4mm; padding: 2.5mm 3mm 2mm; break-inside: avoid; }
+  .g-head { margin-bottom: 2mm; font-size: 7pt; }
+  .g-grid { grid-template-columns: 38mm 1fr; gap: 1.5mm 3mm; }
+  .g-lbl { font-size: 7.6pt; }
+  .g-lbl small { font-size: 6.6pt; }
+  .g-track { height: 4.5mm; }
+  .g-txt { font-size: 6.4pt; }
+  .g-axis { font-size: 6.8pt; }
+  .quote::before { height: 2px; }
+}
+
+/* ------------------------------------------------------------------
+   Impression A4 — « Download CV »
+------------------------------------------------------------------- */
+@page { size: A4; margin: 13mm 14mm 14mm; }
+@media print {
+  :root { --gutter: 0px; }
+  html, body { background: #fff !important; }
+  body { font-size: 9.4pt; line-height: 1.45; color: #1F2327; }
+  * { box-shadow: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .topbar, .hero-cta, .no-print, .hero::before, .project::after { display: none !important; }
+  .wrap { max-width: none; padding-inline: 0; }
+  a { text-decoration: none; }
+
+  .hero { background: #fff !important; color: var(--anthracite); padding: 0 0 5mm; border-bottom: 1.5pt solid var(--anthracite); }
+  .hero .wrap { grid-template-columns: 1.25fr 1fr; gap: 8mm; align-items: start; }
+  .hero .label { color: var(--accent); }
+  .hero .label::before { background: var(--accent); }
+  .hero h1 { font-size: 34pt; margin-top: 3mm; }
+  .roles { margin-top: 3mm; }
+  .roles span { font-size: 11.5pt; color: var(--anthracite) !important; }
+  .thesis { margin-top: 4mm; font-size: 10.5pt; color: #3A4046; border-left-color: var(--accent); padding-left: 3mm; max-width: none; }
+  .cartouche { background: #fff; border-color: #9AA1A8; }
+  .cartouche-head { border-color: #9AA1A8; color: var(--steel); padding: 2mm 3mm; font-size: 7pt; }
+  .cartouche dt, .cartouche dd { padding: 1.6mm 3mm; border-color: #DCDFE2 !important; }
+  .cartouche dt { color: var(--steel); font-size: 6.8pt; }
+  .cartouche dd { color: var(--anthracite); font-size: 8.8pt; }
+  .cartouche dd.big { font-size: 13pt; }
+
+  section { padding-block: 5mm; border-top: 0 !important; }
+  section.alt, .ai, .contact { background: #fff !important; color: var(--ink) !important; }
+  .sec-head { grid-template-columns: 1fr; gap: 1mm; margin-bottom: 3mm; }
+  .sec-head h2 { font-size: 15pt; color: var(--anthracite) !important; }
+  .sec-head .label, .ai .sec-head .label { color: var(--accent) !important; font-size: 7pt; }
+  .sec-body { grid-template-columns: 1fr; gap: 0; }
+  .sec-body > .side { display: none; }
+  .lead { font-size: 10.5pt; max-width: none; color: var(--anthracite) !important; }
+  .prose { gap: 2mm; max-width: none; margin-top: 2mm; }
+  .facts { margin-top: 4mm; }
+  .fact { padding-top: 2.5mm; }
+  .fact strong { font-size: 16pt; }
+  .fact span { font-size: 8.5pt; }
+  .fact strong.txt-fact { font-size: 11pt; padding-block: 1mm 0; }
+  .xp-when, .xp-when b { font-size: 8.4pt; }
+
+  .pillars { grid-template-columns: repeat(4, 1fr); }
+  .pillar, .pillar + .pillar { padding: 3mm 3mm 0 0; margin-top: 0; border-top: 0; }
+  .pillar + .pillar { padding-left: 3mm; border-left: 1px solid var(--line); }
+  .pillar h3 { font-size: 10.5pt; }
+  .pillar li { font-size: 8.6pt; }
+  .pillar li + li { margin-top: 1mm; }
+  .split { margin-top: 4mm; gap: 6mm; }
+  .chip { font-size: 8pt; padding: 1.2mm 2mm; }
+
+  .xp-group + .xp-group { margin-top: 4mm; }
+  .xp-group > .label { margin-bottom: 1mm; }
+  .xp { grid-template-columns: 34mm 1fr; gap: 5mm; padding-block: 3.5mm; break-inside: avoid; }
+  .xp h3 { font-size: 12pt; }
+  .xp-org { font-size: 9pt; margin-top: .5mm; }
+  .xp-cols { margin-top: 2mm; gap: 1mm 6mm; }
+  .xp-cols li { font-size: 8.6pt; }
+  .xp-env { margin-top: 2mm; font-size: 7.6pt; }
+  .quote { margin-top: 2.5mm; padding: 2mm 3mm; font-size: 8.4pt; background: #F4F5F6 !important; }
+  .quote cite { font-size: 7pt; margin-top: 1mm; }
+  .quotes { grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-top: 2.5mm; }
+  .quotes .quote { font-size: 8.2pt; }
+
+  .projects { grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .project, .project.light { background: #fff !important; color: var(--anthracite) !important; border: 1px solid var(--anthracite); padding: 4mm; gap: 2.5mm; break-inside: avoid; }
+  .project h3 { font-size: 17pt; }
+  .project .sub { font-size: 9pt; margin-top: 0; color: var(--steel) !important; }
+  .project dl { border-top-color: var(--line) !important; }
+  .project dl div { grid-template-columns: 22mm 1fr; gap: 2mm; padding-block: 1.5mm; border-bottom-color: var(--line) !important; }
+  .project dt { color: var(--steel) !important; font-size: 6.8pt; }
+  .project dd { font-size: 8.4pt; }
+  .project .site-link { color: var(--accent) !important; font-size: 8pt; }
+  .tag { font-size: 7pt; padding: 1mm 1.6mm; color: var(--anthracite) !important; border-color: var(--line) !important; }
+
+  .skills { grid-template-columns: repeat(3, 1fr); }
+  .skillset, .skillset:nth-child(2n), .skillset:not(:nth-child(3n+1)) { padding: 2.5mm 3mm 3mm 0; border-left: 0; }
+  .skillset:not(:nth-child(3n+1)) { padding-left: 3mm; border-left: 1px solid var(--line); }
+  .skillset h3 { font-size: 10pt; margin-bottom: 2mm; }
+  .skills .chips { gap: 1.2mm; }
+
+  .ai .sec-head h2 { color: var(--anthracite) !important; }
+  .ai .lead { color: var(--anthracite) !important; }
+  .ai-grid { margin-top: 3mm; grid-template-columns: repeat(3, 1fr); border-top-color: var(--anthracite); }
+  .ai-item, .ai-item + .ai-item { padding: 2.5mm 3mm 0 0; margin-top: 0; border-top: 0; }
+  .ai-item + .ai-item { padding-left: 3mm; border-left: 1px solid var(--line); }
+  .ai-item .label { color: var(--accent) !important; }
+  .ai-item h3 { font-size: 10.5pt; }
+  .ai-item p { font-size: 8.6pt; color: #3A4046 !important; }
+  .ai .tags { margin-top: 3mm; }
+
+  .trio { grid-template-columns: 1.3fr 1fr 1fr; gap: 6mm; break-inside: avoid; }
+  .trio h2 { font-size: 12pt; margin: 1mm 0 2mm; }
+  .entry { padding-block: 2mm; }
+  .entry span { font-size: 8.4pt; }
+
+  .contact .wrap { grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; }
+  .contact { border-top: 1.5pt solid var(--anthracite) !important; margin-top: 3mm; break-inside: avoid; }
+  .contact h2 { font-size: 15pt; color: var(--anthracite); }
+  .contact p { font-size: 9.5pt; margin-top: 2mm; color: #3A4046; }
+  .contact .cartouche dd a { color: var(--anthracite); }
+  footer { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================================ NAV -->
+<header class="topbar">
+  <div class="progress" aria-hidden="true"></div>
+  <div class="wrap">
+    <a class="brand" href="#top">ALBERTO RAMOS<span class="brand-sub"> <b>/</b> <span class="fr">ING. MÉCANIQUE</span><span class="en">MECH. ENG.</span></span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#profil"><span class="fr">Profil</span><span class="en">Profile</span></a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience"><span class="fr">Expérience</span><span class="en">Experience</span></a>
+      <a href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a>
+      <a href="#ia"><span class="fr">IA</span><span class="en">AI</span></a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" id="lang-fr" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="btn btn-light js-print" id="print-top">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
+        <span class="txt">Download CV</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================================================================ 1. HERO -->
+<section class="hero" aria-labelledby="hero-name">
+  <div class="frame" aria-hidden="true"><div class="fr-top"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div><div class="fr-left"><span>A</span><span>B</span><span>C</span><span>D</span></div></div>
+  <div class="wrap">
+    <div>
+      <p class="label"><span class="fr">Consultant freelance · Ingénierie mécanique</span><span class="en">Freelance consultant · Mechanical engineering</span></p>
+      <div class="name-block"><h1 id="hero-name">ALBERTO<br>RAMOS</h1><div class="dim" aria-hidden="true"><i></i><span class="fr">20+ ans d'industrie</span><span class="en">20+ years in industry</span><i></i></div></div>
+      <div class="roles">
+        <span>Senior Mechanical Design Engineer</span>
+        <span>Vehicle &amp; Product Architecture</span>
+        <span>Technical Project Lead</span>
+      </div>
+      <p class="thesis">
+        <span class="fr">Comprendre un problème complexe, structurer l'architecture, faire converger les métiers — et piloter l'équipe jusqu'à la solution.</span>
+        <span class="en">Understand a complex problem, structure the architecture, bring every discipline into alignment — and lead the team all the way to the solution.</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-light" href="#contact"><span class="fr">Me contacter</span><span class="en">Get in touch</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4-4 4"/></svg></a>
+        <button type="button" class="btn btn-ghost js-print" id="print-hero">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
+          Download CV</button>
+      </div>
+    </div>
+
+    <aside class="cartouche" aria-label="Synthèse">
+      <div class="cartouche-head"><span class="fr">Cartouche · Profil</span><span class="en">Title block · Profile</span><span>Rév. 2026</span></div>
+      <dl>
+        <dt><span class="fr">Expérience</span><span class="en">Experience</span></dt>
+        <dd class="big"><span class="fr">20+ ans</span><span class="en">20+ years</span></dd>
+        <dt><span class="fr">Secteur</span><span class="en">Industry</span></dt>
+        <dd><span class="fr">Automobile · Bureau d'études</span><span class="en">Automotive · Design office</span></dd>
+        <dt><span class="fr">Outils</span><span class="en">Tools</span></dt>
+        <dd>CATIA V5 / V6 · 3DEXPERIENCE</dd>
+        <dt><span class="fr">Spécialité</span><span class="en">Specialty</span></dt>
+        <dd><span class="fr">Architecture véhicule</span><span class="en">Vehicle architecture</span></dd>
+        <dt><span class="fr">Rôle</span><span class="en">Role</span></dt>
+        <dd><span class="fr">Pilotage technique</span><span class="en">Technical leadership</span></dd>
+        <dt><span class="fr">Base</span><span class="en">Based in</span></dt>
+        <dd>Mantes-la-Jolie, France</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ================================================================ 2. PROFIL -->
+<section id="profil">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Profil</span><span class="en">Profile</span></p>
+      <h2><span class="fr">Un expert technique qui fait converger, pas seulement un concepteur CAO.</span><span class="en">A technical expert who drives convergence — not just a CAD designer.</span></h2>
+    </div>
+    <div class="sec-body">
+      <div class="side"></div>
+      <div>
+        <p class="lead">
+          <span class="fr">Ingénieur mécanique senior, plus de 20 ans d'industrie. J'interviens sur la conception, l'architecture et le développement de produits complexes — de l'analyse du besoin jusqu'à la définition et la convergence des solutions techniques.</span>
+          <span class="en">Senior mechanical engineer with 20+ years in industry. I work on the design, architecture and development of complex products — from needs analysis through to the definition and convergence of technical solutions.</span>
+        </p>
+        <div class="prose" style="margin-top:18px">
+          <p class="fr">Mon expérience couvre la conception mécanique, l'architecture produit et véhicule, la synthèse technique et le pilotage de projets et d'équipes pluridisciplinaires. Habitué aux environnements industriels exigeants, je tiens ensemble les contraintes coût, process et délais pour amener les métiers à une solution commune.</p>
+          <p class="en">My background spans mechanical design, product and vehicle architecture, technical synthesis, and leading projects and cross-functional teams. Used to demanding industrial environments, I keep cost, process and schedule constraints in balance to bring every discipline to a shared solution.</p>
+          <p class="fr">J'intègre l'automatisation et l'IA dans mes méthodes de travail pour rendre les processus d'ingénierie plus efficaces.</p>
+          <p class="en">I build automation and AI into my working methods to make engineering processes more efficient.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>20+</strong><span class="fr">ans d'ingénierie industrielle</span><span class="en">years of industrial engineering</span></div>
+          <div class="fact"><strong>5</strong><span class="fr">architectes pilotés au sein d'une équipe internationale</span><span class="en">architects led in an international team</span></div>
+          <div class="fact"><strong class="fr txt-fact">Avant-projet → outillages</strong><strong class="en txt-fact">Pre-project → tooling</strong><span class="fr">périmètre couvert sur un programme véhicule</span><span class="en">scope covered on a vehicle programme</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 3. EXPERTISE -->
+<section id="expertise" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Expertise</p>
+      <h2><span class="fr">Quatre leviers pour faire aboutir un produit complexe.</span><span class="en">Four levers to deliver a complex product.</span></h2>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <p class="label">A <span class="fr">· Calque architecture</span><span class="en">· Architecture layer</span></p>
+        <h3><span class="fr">Architecture véhicule &amp; produit</span><span class="en">Vehicle &amp; product architecture</span></h3>
+        <ul>
+          <li class="fr">Architecture mécanique et véhicule</li><li class="en">Mechanical and vehicle architecture</li>
+          <li class="fr">Synthèse et convergence technique</li><li class="en">Technical synthesis and convergence</li>
+          <li class="fr">Cohérence coût / process / délais</li><li class="en">Cost / process / schedule consistency</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <p class="label">B <span class="fr">· Calque conception</span><span class="en">· Design layer</span></p>
+        <h3><span class="fr">Conception mécanique</span><span class="en">Mechanical design</span></h3>
+        <ul>
+          <li class="fr">Conception et développement mécanique</li><li class="en">Mechanical design and development</li>
+          <li class="fr">CAO 3D — CATIA, 3DEXPERIENCE</li><li class="en">3D CAD — CATIA, 3DEXPERIENCE</li>
+          <li class="fr">Mise en plan et définition produit</li><li class="en">Drawings and product definition</li>
+          <li class="fr">Analyse et résolution de problèmes techniques</li><li class="en">Technical problem analysis and solving</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <p class="label">C <span class="fr">· Calque pilotage</span><span class="en">· Leadership layer</span></p>
+        <h3><span class="fr">Pilotage technique</span><span class="en">Technical leadership</span></h3>
+        <ul>
+          <li class="fr">Pilotage de projets de conception</li><li class="en">Design project management</li>
+          <li class="fr">Coordination d'équipes techniques</li><li class="en">Technical team coordination</li>
+          <li class="fr">Interface conception / industrialisation / métiers transverses</li><li class="en">Interface between design, industrialisation and cross-functional teams</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <p class="label">D <span class="fr">· Calque méthodes</span><span class="en">· Methods layer</span></p>
+        <h3><span class="fr">Méthodes &amp; performance du BE</span><span class="en">Engineering methods &amp; performance</span></h3>
+        <ul>
+          <li class="fr">Amélioration des méthodes et processus de bureau d'études</li><li class="en">Improving design-office methods and processes</li>
+          <li class="fr">Outils Excel-VBA, automatisation</li><li class="en">Excel-VBA tools, automation</li>
+          <li class="fr">IA appliquée aux processus d'ingénierie</li><li class="en">AI applied to engineering processes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3><span class="fr">Positionnements de mission</span><span class="en">Mission roles</span></h3>
+        <div class="chips">
+          <span class="chip strong"><span class="fr">Architecte véhicule</span><span class="en">Vehicle architect</span></span>
+          <span class="chip strong"><span class="fr">Pilote technique transverse</span><span class="en">Cross-functional technical lead</span></span>
+          <span class="chip"><span class="fr">Expert technique</span><span class="en">Technical expert</span></span>
+          <span class="chip"><span class="fr">Référent conception</span><span class="en">Design lead</span></span>
+          <span class="chip"><span class="fr">Pilote de sujet</span><span class="en">Topic owner</span></span>
+        </div>
+      </div>
+      <div>
+        <h3><span class="fr">Domaines industriels</span><span class="en">Industries</span></h3>
+        <div class="chips">
+          <span class="chip strong"><span class="fr">Construction automobile</span><span class="en">Automotive manufacturing</span></span>
+          <span class="chip"><span class="fr">Aérospatial</span><span class="en">Aerospace</span></span>
+          <span class="chip"><span class="fr">Défense et armée</span><span class="en">Defence</span></span>
+          <span class="chip"><span class="fr">Machines et équipements</span><span class="en">Machinery and equipment</span></span>
+          <span class="chip"><span class="fr">Transports publics et ferroviaires</span><span class="en">Public transport and rail</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 4. EXPÉRIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Expérience</span><span class="en">Experience</span></p>
+      <h2><span class="fr">Architecture véhicule, de l'avant-projet aux outillages.</span><span class="en">Vehicle architecture, from pre-project to tooling.</span></h2>
+    </div>
+
+    <div class="gantt">
+      <div class="g-head"><span><span class="fr">Frise des missions</span><span class="en">Assignment timeline</span></span><span>2022 → <span class="fr">aujourd'hui</span><span class="en">today</span></span></div>
+      <div class="g-grid">
+        <div class="g-row">
+          <p class="g-lbl">RENAULT<small><span class="fr">Architecte véhicule · Face avant</span><span class="en">Vehicle architect · Front end</span></small></p>
+          <div class="g-track"><span class="g-bar" data-from="2022-01" data-to="2025-03" style="--c:var(--layer-a); left:0; width:65%"><span class="g-txt">2022 — 2025</span></span><span class="g-now" data-label="" style="left:95%"></span></div>
+        </div>
+        <div class="g-row">
+          <p class="g-lbl">RENAULT · FLEXIS<small><span class="fr">Architecte synthèse conversion</span><span class="en">Conversion synthesis architect</span></small></p>
+          <div class="g-track"><span class="g-bar" data-from="2025-04" data-to="now" style="--c:var(--layer-b); left:65%; width:30%"><span class="g-txt">2025 — <span class="fr">auj.</span><span class="en">now</span></span></span><span class="g-now" style="left:95%"></span></div>
+        </div>
+        <div class="g-row">
+          <p class="g-lbl">DUVIA™<small><span class="fr">Fondateur &amp; Product Owner</span><span class="en">Founder &amp; Product Owner</span></small></p>
+          <div class="g-track"><span class="g-bar short" data-from="2026-06" data-to="now" style="--c:var(--layer-c); left:88.3%; width:6.7%"><span class="g-txt">2026 — <span class="fr">auj.</span><span class="en">now</span></span></span><span class="g-now" style="left:95%"></span></div>
+        </div>
+        <div class="g-axis"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+      </div>
+    </div>
+    <div class="xp-group">
+      <span class="label"><span class="fr">Industrie automobile</span><span class="en">Automotive industry</span></span>
+
+      <article class="xp" data-c style="--c:var(--layer-b)">
+        <p class="xp-when"><b><span class="fr">Avr. 2025 — aujourd'hui</span><span class="en">Apr 2025 — present</span></b>RENAULT</p>
+        <div>
+          <h3><span class="fr">Architecte Synthèse Conversion — Flexis</span><span class="en">Conversion Synthesis Architect — Flexis</span></h3>
+          <p class="xp-org"><strong>RENAULT</strong> · <span class="fr">Conversion de véhicules — gamme FlexEVAN de FLEXIS</span><span class="en">Vehicle conversion — FLEXIS FlexEVAN range</span></p>
+          <ul class="xp-cols">
+            <li class="fr">Staffing de l'équipe d'architectes, mise en place de l'organisation et des routines</li><li class="en">Staffed the architect team; set up its organisation and working routines</li>
+            <li class="fr">Pilotage de l'architecture des sujets de conversion et priorisation des activités</li><li class="en">Led the architecture of conversion topics and prioritised activities</li>
+            <li class="fr">Animation et synchronisation des métiers, convergence technique</li><li class="en">Facilitated and synchronised disciplines to reach technical convergence</li>
+            <li class="fr">Pilotage des livrables et suivi de l'avancement aux jalons</li><li class="en">Managed deliverables and tracked progress at each milestone</li>
+            <li class="fr">Création d'un outil de suivi EO/RO : meilleure visibilité sur le statut des pièces, équipe plus réactive</li><li class="en">Built an EO/RO tracking tool: clearer visibility on part status, a more responsive team</li>
+            <li class="fr">Suivi et coordination via JIRA et 3DEXPERIENCE</li><li class="en">Tracking and coordination through JIRA and 3DEXPERIENCE</li>
+          </ul>
+          <p class="xp-env"><span class="fr">Environnement</span><span class="en">Environment</span> — <span>CATIA V6 · 3DEXPERIENCE · JIRA</span> · <span class="fr">Gestion d'équipe · Reporting</span><span class="en">Team management · Reporting</span></p>
+          <blockquote class="quote">
+            <span class="fr">« A piloté les livrables au jalon suivant la check-list métier VA […]. Il a challengé les constructions pour qu'elles soient les plus performantes possibles. »</span>
+            <span class="en">“Managed the milestone deliverables against the VA discipline checklist […]. He challenged the designs to make them as efficient as possible.”</span>
+            <cite><span class="fr">Retour managérial Renault · 2025</span><span class="en">Renault manager review · 2025 (translated)</span></cite>
+          </blockquote>
+        </div>
+      </article>
+
+      <article class="xp" data-c style="--c:var(--layer-a)">
+        <p class="xp-when"><b><span class="fr">Janv. 2022 — mars 2025</span><span class="en">Jan 2022 — Mar 2025</span></b>RENAULT</p>
+        <div>
+          <h3><span class="fr">Architecte Véhicule — Zone Face Avant</span><span class="en">Vehicle Architect — Front End Zone</span></h3>
+          <p class="xp-org"><strong>RENAULT</strong> · <span class="fr">Projet Nouveau Trafic / FlexEVAN</span><span class="en">New Trafic / FlexEVAN programme</span></p>
+          <ul class="xp-cols">
+            <li class="fr">Pilotage d'une équipe internationale de 5 architectes</li><li class="en">Led an international team of 5 architects</li>
+            <li class="fr">Convergence de l'architecture d'une zone véhicule complexe</li><li class="en">Drove architecture convergence on a complex vehicle zone</li>
+            <li class="fr">Cohérence des solutions avec les contraintes coût, process et délais</li><li class="en">Kept solutions consistent with cost, process and schedule constraints</li>
+            <li class="fr">Coordination des métiers et validation des choix techniques</li><li class="en">Coordinated disciplines and validated technical choices</li>
+            <li class="fr">De l'avant-projet jusqu'à la réalisation des outillages</li><li class="en">From pre-project through to tooling</li>
+            <li class="fr">Innovation : contribution au dépôt de brevets, rédaction de dossiers CIR</li><li class="en">Innovation: contributed to patent filings, wrote French R&amp;D tax credit (CIR) files</li>
+            <li class="fr">Reporting et suivi de l'avancement projet</li><li class="en">Reporting and project progress tracking</li>
+          </ul>
+          <p class="xp-env"><span class="fr">Environnement</span><span class="en">Environment</span> — <span>CATIA V6 · 3DEXPERIENCE · JIRA</span> · <span class="fr">Gestion d'équipe · Reporting</span><span class="en">Team management · Reporting</span></p>
+          <div class="quotes">
+            <blockquote class="quote">
+              <span class="fr">« Pilote la convergence de la FAV qui cumule plusieurs challenges : innovation, design, équipe de conception au RNTBCI, outil numérique RVT. »</span>
+              <span class="en">“Leads front-end convergence across several challenges at once: innovation, design, a design team at RNTBCI, the RVT digital tool.”</span>
+              <cite>2023</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <span class="fr">« A su animer la Team zone avec efficacité, malgré les aléas du projet […] en propositions concrètes pour améliorer les modes de fonctionnement et les outils. »</span>
+              <span class="en">“Ran the zone team effectively despite project setbacks […] turning them into concrete proposals to improve ways of working and tools.”</span>
+              <cite>2024</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <span class="fr">« Rigueur, organisation, volontariat, proactivité, efficacité et engagement sur le projet FlexEVAN. »</span>
+              <span class="en">“Rigour, organisation, initiative, proactivity, efficiency and commitment on the FlexEVAN project.”</span>
+              <cite>2022</cite>
+            </blockquote>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="xp-group">
+      <span class="label"><span class="fr">Entrepreneuriat · Produit numérique</span><span class="en">Entrepreneurship · Digital product</span></span>
+      <article class="xp" data-c style="--c:var(--layer-c)">
+        <p class="xp-when"><b><span class="fr">Juin 2026 — aujourd'hui</span><span class="en">Jun 2026 — present</span></b>DUVIA™</p>
+        <div>
+          <h3><span class="fr">Fondateur &amp; Product Owner</span><span class="en">Founder &amp; Product Owner</span></h3>
+          <p class="xp-org"><strong>DUVIA™</strong> · <span class="fr">Édition de logiciels — application de coparentalité (calendrier de garde, dépenses, communication entre parents)</span><span class="en">Software publishing — co-parenting app (custody calendar, expenses, parent communication)</span> · <a class="site-link" href="https://duvia.fr" target="_blank" rel="noopener">duvia.fr ↗</a></p>
+          <ul class="xp-cols">
+            <li class="fr">Conception et mise en production d'un SaaS / PWA de bout en bout</li><li class="en">Designed and shipped a SaaS / PWA end to end</li>
+            <li class="fr">Spécification, pilotage et validation du développement avec Claude Code</li><li class="en">Specified, steered and validated development with Claude Code</li>
+            <li class="fr">Conception d'agents IA pour produire et publier des contenus</li><li class="en">Designed AI agents to produce and publish content</li>
+            <li class="fr">Architecture des données et mise en œuvre des exigences RGPD</li><li class="en">Data architecture and GDPR compliance</li>
+            <li class="fr">Pilotage produit, fonctionnalités et modèle tarifaire</li><li class="en">Product management, feature definition and pricing model</li>
+            <li class="fr">Domaine, dépôt de marque, déploiement du site web et SEO</li><li class="en">Domain, trademark filing, website deployment and SEO</li>
+          </ul>
+          <p class="xp-env"><span class="fr">Environnement</span><span class="en">Environment</span> — <span>Claude Code · <span class="fr">IA générative</span><span class="en">Generative AI</span> · GitHub · Vercel · Prompt engineering</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 5. PROJETS CLÉS -->
+<section id="projets" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Projets clés</span><span class="en">Key projects</span></p>
+      <h2><span class="fr">Deux programmes, une même méthode : structurer, faire converger, livrer.</span><span class="en">Two programmes, one method: structure, converge, deliver.</span></h2>
+    </div>
+
+    <div class="projects">
+      <article class="project">
+        <div class="ref"><span>RENAULT · FLEXIS</span><span>2022 — 2026</span></div>
+        <h3>FLEXEVAN</h3>
+        <p class="sub"><span class="fr">Architecture et conversion de véhicules utilitaires — Nouveau Trafic puis gamme FlexEVAN de FLEXIS.</span><span class="en">Architecture and conversion of light commercial vehicles — New Trafic, then the FLEXIS FlexEVAN range.</span></p>
+        <a class="site-link award" href="https://www.renaultgroup.com/en/magazine/our-group-news/the-all-new-trafic-e-tech-electric-crowned-van-of-the-year-2026/" target="_blank" rel="noopener"><span class="fr">Trafic Van E-Tech : « Van of the Year 2026 » — lire l'article ↗</span><span class="en">Trafic Van E-Tech: “Van of the Year 2026” — read the article ↗</span></a>
+        <dl>
+          <div><dt><span class="fr">Rôle</span><span class="en">Role</span></dt><dd><span class="fr">Architecte véhicule zone face avant, puis architecte synthèse conversion</span><span class="en">Front-end zone vehicle architect, then conversion synthesis architect</span></dd></div>
+          <div><dt><span class="fr">Équipe</span><span class="en">Team</span></dt><dd><span class="fr">Pilotage d'une équipe internationale de 5 architectes ; staffing et organisation de l'équipe conversion</span><span class="en">Led an international team of 5 architects; staffed and organised the conversion team</span></dd></div>
+          <div><dt><span class="fr">Apport</span><span class="en">Impact</span></dt><dd><span class="fr">Convergence d'une zone complexe de l'avant-projet aux outillages ; outil de suivi EO/RO ; brevets et dossiers CIR</span><span class="en">Converged a complex zone from pre-project to tooling; EO/RO tracking tool; patents and R&amp;D tax credit files</span></dd></div>
+        </dl>
+        <div class="tags">
+          <span class="tag"><span class="fr">Architecture véhicule</span><span class="en">Vehicle architecture</span></span>
+          <span class="tag"><span class="fr">Conversion véhicule</span><span class="en">Vehicle conversion</span></span>
+          <span class="tag"><span class="fr">Équipe internationale</span><span class="en">International team</span></span>
+          <span class="tag">CATIA V6</span>
+          <span class="tag">3DEXPERIENCE</span>
+        </div>
+      </article>
+
+      <article class="project light">
+        <div class="ref"><span class="fr">SAAS · PRODUIT PROPRE</span><span class="en">SAAS · OWN PRODUCT</span><span>2026 —</span></div>
+        <h3>DUVIA™</h3>
+        <a class="site-link" href="https://duvia.fr" target="_blank" rel="noopener">duvia.fr ↗</a>
+        <p class="sub"><span class="fr">Application de coparentalité conçue, lancée et pilotée en solo, avec l'IA générative comme équipe de développement.</span><span class="en">A co-parenting app designed, launched and run solo, with generative AI as the development team.</span></p>
+        <dl>
+          <div><dt><span class="fr">Rôle</span><span class="en">Role</span></dt><dd><span class="fr">Fondateur et Product Owner</span><span class="en">Founder and Product Owner</span></dd></div>
+          <div><dt><span class="fr">Périmètre</span><span class="en">Scope</span></dt><dd><span class="fr">SaaS / PWA de bout en bout : spécification, architecture des données, RGPD, tarification, marque, SEO</span><span class="en">End-to-end SaaS / PWA: specification, data architecture, GDPR, pricing, trademark, SEO</span></dd></div>
+          <div><dt><span class="fr">Méthode</span><span class="en">Method</span></dt><dd><span class="fr">Développement spécifié, piloté et validé avec Claude Code ; agents IA pour la production de contenus</span><span class="en">Development specified, steered and validated with Claude Code; AI agents for content production</span></dd></div>
+        </dl>
+        <div class="tags">
+          <span class="tag">SaaS</span>
+          <span class="tag"><span class="fr">IA générative</span><span class="en">Generative AI</span></span>
+          <span class="tag">Product Management</span>
+          <span class="tag"><span class="fr">Automatisation</span><span class="en">Automation</span></span>
+          <span class="tag">Claude Code</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 6. COMPÉTENCES -->
+<section id="competences">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Compétences</span><span class="en">Skills</span></p>
+      <h2><span class="fr">Boîte à outils.</span><span class="en">Toolkit.</span></h2>
+    </div>
+    <div class="skills">
+      <div class="skillset">
+        <h3><span class="fr">CAO &amp; conception</span><span class="en">CAD &amp; design</span></h3>
+        <div class="chips">
+          <span class="chip strong">CATIA V5</span><span class="chip strong">CATIA V6</span><span class="chip strong">3DEXPERIENCE</span>
+          <span class="chip"><span class="fr">Conception 3D</span><span class="en">3D design</span></span>
+          <span class="chip">CAO / DAO</span>
+          <span class="chip"><span class="fr">Mise en plan 2D</span><span class="en">2D drawings</span></span>
+          <span class="chip"><span class="fr">Impression 3D</span><span class="en">3D printing</span></span>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3><span class="fr">Ingénierie &amp; architecture</span><span class="en">Engineering &amp; architecture</span></h3>
+        <div class="chips">
+          <span class="chip strong"><span class="fr">Architecture véhicule</span><span class="en">Vehicle architecture</span></span>
+          <span class="chip strong"><span class="fr">Architecture mécanique</span><span class="en">Mechanical architecture</span></span>
+          <span class="chip"><span class="fr">Conception mécanique</span><span class="en">Mechanical design</span></span>
+          <span class="chip"><span class="fr">Ingénierie mécanique</span><span class="en">Mechanical engineering</span></span>
+          <span class="chip"><span class="fr">Bureau d'études</span><span class="en">Design office</span></span>
+          <span class="chip"><span class="fr">Secteur automobile</span><span class="en">Automotive</span></span>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3><span class="fr">Pilotage &amp; management</span><span class="en">Leadership &amp; management</span></h3>
+        <div class="chips">
+          <span class="chip strong"><span class="fr">Pilotage technique transverse</span><span class="en">Cross-functional technical lead</span></span>
+          <span class="chip strong"><span class="fr">Management d'équipe</span><span class="en">Team management</span></span>
+          <span class="chip"><span class="fr">Gestion de projet technique</span><span class="en">Technical project management</span></span>
+          <span class="chip"><span class="fr">Planification</span><span class="en">Planning</span></span>
+          <span class="chip">Reporting</span>
+          <span class="chip"><span class="fr">Relations fournisseurs</span><span class="en">Supplier relations</span></span>
+          <span class="chip"><span class="fr">Développement international</span><span class="en">International development</span></span>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3><span class="fr">Méthodes &amp; outils</span><span class="en">Methods &amp; tools</span></h3>
+        <div class="chips">
+          <span class="chip strong">Atlassian JIRA</span>
+          <span class="chip"><span class="fr">Méthodes agiles</span><span class="en">Agile methods</span></span>
+          <span class="chip">Scrum Master</span>
+          <span class="chip">Microsoft Excel</span>
+          <span class="chip">VBA</span>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3><span class="fr">Innovation</span><span class="en">Innovation</span></h3>
+        <div class="chips">
+          <span class="chip strong"><span class="fr">Brevets</span><span class="en">Patents</span></span>
+          <span class="chip strong"><span class="fr">Crédit Impôt Recherche (CIR)</span><span class="en">French R&amp;D tax credit (CIR)</span></span>
+          <span class="chip">Innovation</span>
+        </div>
+      </div>
+      <div class="skillset">
+        <h3><span class="fr">IA &amp; automatisation</span><span class="en">AI &amp; automation</span></h3>
+        <div class="chips">
+          <span class="chip strong">Claude Code</span>
+          <span class="chip strong">Prompt engineering</span>
+          <span class="chip"><span class="fr">Intelligence artificielle</span><span class="en">Artificial intelligence</span></span>
+          <span class="chip"><span class="fr">Automatisation</span><span class="en">Automation</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 7. AUTOMATISATION & IA -->
+<section id="ia" class="ai">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label"><span class="fr">Automatisation &amp; IA</span><span class="en">Automation &amp; AI</span></p>
+      <h2><span class="fr">Un ingénieur qui outille aussi son bureau d'études.</span><span class="en">An engineer who also tools up the design office.</span></h2>
+    </div>
+    <div class="sec-body">
+      <div class="side"></div>
+      <div>
+        <p class="lead"><span class="fr">Moins de tâches répétitives, plus de temps pour les décisions techniques : j'automatise ce qui peut l'être et j'intègre l'IA là où elle rend les équipes plus productives.</span><span class="en">Fewer repetitive tasks, more time for engineering decisions: I automate what can be automated and bring in AI wherever it makes teams more productive.</span></p>
+        <div class="ai-grid">
+          <div class="ai-item">
+            <p class="label">Excel-VBA</p>
+            <h3><span class="fr">Outils métier sur mesure</span><span class="en">Custom engineering tools</span></h3>
+            <p><span class="fr">Développement d'outils Excel-VBA et automatisation des tâches répétitives — comme l'outil de suivi EO/RO mis en place chez Renault.</span><span class="en">Excel-VBA tool development and automation of repetitive tasks — such as the EO/RO tracking tool deployed at Renault.</span></p>
+          </div>
+          <div class="ai-item">
+            <p class="label"><span class="fr">IA générative</span><span class="en">Generative AI</span></p>
+            <h3><span class="fr">L'IA dans les processus d'ingénierie</span><span class="en">AI in engineering processes</span></h3>
+            <p><span class="fr">Utilisation de l'intelligence artificielle pour améliorer la productivité des équipes. Certifié SKIPPER GenAI (Renault Group, 2026).</span><span class="en">Using artificial intelligence to raise team productivity. SKIPPER GenAI certified (Renault Group, 2026).</span></p>
+          </div>
+          <div class="ai-item">
+            <p class="label">Claude Code</p>
+            <h3><span class="fr">Du prompt au produit en production</span><span class="en">From prompt to production</span></h3>
+            <p><span class="fr">Prompt engineering et agents IA : spécification, pilotage et validation d'un SaaS complet (DUVIA™) développé avec Claude Code.</span><span class="en">Prompt engineering and AI agents: specifying, steering and validating a complete SaaS (DUVIA™) built with Claude Code.</span></p>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Excel-VBA</span><span class="tag">Claude Code</span><span class="tag">Prompt engineering</span>
+          <span class="tag"><span class="fr">Agents IA</span><span class="en">AI agents</span></span>
+          <span class="tag"><span class="fr">Automatisation</span><span class="en">Automation</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 8–10. FORMATION / CERTIFICATIONS / LANGUES -->
+<section id="formation">
+  <div class="wrap trio">
+    <div>
+      <p class="label"><span class="fr">Formation</span><span class="en">Education</span></p>
+      <h2><span class="fr">Formation</span><span class="en">Education</span></h2>
+      <div class="entry">
+        <strong><span class="fr">Master 2 Design Produit – Conception</span><span class="en">Master's degree (M2) in Product Design – Engineering Design</span></strong>
+        <span class="fr">Option Prototypage rapide · Université Henri Poincaré Nancy 1 – InSIC, Saint-Dié-des-Vosges</span>
+        <span class="en">Rapid prototyping option · Université Henri Poincaré Nancy 1 – InSIC, Saint-Dié-des-Vosges</span>
+        <span class="mono">2004</span>
+      </div>
+      <div class="entry">
+        <strong><span class="fr">Licence et Master 1 Génie des Matériaux</span><span class="en">Bachelor's and M1 in Materials Engineering</span></strong>
+        <span class="fr">Mention Ingénieur Maître · Université de Reims – IFTS</span>
+        <span class="en">“Ingénieur Maître” distinction · Université de Reims – IFTS</span>
+        <span class="mono">2003</span>
+      </div>
+    </div>
+    <div>
+      <p class="label">Certifications</p>
+      <h2>Certifications</h2>
+      <div class="entry"><strong>SKIPPER GenAI</strong><span>Renault Group</span><span class="mono">2026</span></div>
+      <div class="entry"><strong>Agile Relay Practitioner</strong><span>Renault Group</span><span class="mono">2021</span></div>
+    </div>
+    <div>
+      <p class="label"><span class="fr">Langues</span><span class="en">Languages</span></p>
+      <h2><span class="fr">Langues</span><span class="en">Languages</span></h2>
+      <div class="entry">
+        <strong><span class="fr">Français</span><span class="en">French</span></strong>
+        <span class="fr">Bilingue ou natif</span><span class="en">Native or bilingual</span>
+        <span class="lvl" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+      </div>
+      <div class="entry">
+        <strong><span class="fr">Anglais</span><span class="en">English</span></strong>
+        <span class="fr">Capacité professionnelle complète</span><span class="en">Full professional proficiency</span>
+        <span class="lvl" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+      </div>
+      <div class="entry">
+        <strong><span class="fr">Portugais</span><span class="en">Portuguese</span></strong>
+        <span class="fr">Notions</span><span class="en">Elementary</span>
+        <span class="lvl" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ 11. CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <p class="label" style="color:var(--accent-lt)">Contact</p>
+      <h2 style="margin-top:18px"><span class="fr">Un programme complexe à faire converger ?</span><span class="en">A complex programme that needs to converge?</span></h2>
+      <p><span class="fr">Architecture véhicule, conception mécanique, pilotage technique : parlons de votre besoin en mission freelance.</span><span class="en">Vehicle architecture, mechanical design, technical leadership: let's talk about your freelance mission.</span></p>
+      <div class="hero-cta">
+        <a class="btn btn-light" href="mailto:alberto.ramos78@gmail.com?subject=Mission%20freelance"><span class="fr">M'écrire</span><span class="en">Email me</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12v8H2zM2 4l6 5 6-5"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+33767606874"><span class="fr">Appeler</span><span class="en">Call</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 2h3l1.5 3.5-2 1.2a8 8 0 0 0 3.8 3.8l1.2-2L14 10v3a1 1 0 0 1-1 1A11 11 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg></a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/alberto-ramos-3582b5258/" target="_blank" rel="noopener">LinkedIn
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 11 11 5m0 0H6m5 0v5"/></svg></a>
+        <button type="button" class="btn btn-ghost js-print" id="print-contact">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
+          Download CV</button>
+      </div>
+    </div>
+    <div class="cartouche">
+      <div class="cartouche-head"><span class="fr">Coordonnées</span><span class="en">Details</span><span>Freelance</span></div>
+      <dl>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:alberto.ramos78@gmail.com">alberto.ramos78@gmail.com</a></dd>
+        <dt><span class="fr">Téléphone</span><span class="en">Phone</span></dt>
+        <dd><a href="tel:+33767606874">+33 7 67 60 68 74</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/alberto-ramos-3582b5258/" target="_blank" rel="noopener">linkedin.com/in/alberto-ramos</a></dd>
+        <dt><span class="fr">Base</span><span class="en">Based in</span></dt>
+        <dd>Mantes-la-Jolie, France</dd>
+        <dt>TJM</dt>
+        <dd><span class="fr">550 € / jour</span><span class="en">€550 / day</span></dd>
+        <dt><span class="fr">Langues</span><span class="en">Languages</span></dt>
+        <dd><span class="fr">Français · Anglais</span><span class="en">French · English</span></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Alberto RAMOS</span>
+    <span class="fr">Ingénierie mécanique · Architecture véhicule · Pilotage technique</span>
+    <span class="en">Mechanical engineering · Vehicle architecture · Technical leadership</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var META = {
+    fr: {
+      title: "Alberto RAMOS — Ingénieur Mécanique Senior · Architecte Véhicule · Pilotage Technique",
+      desc: "Alberto RAMOS, ingénieur conception mécanique senior (20+ ans) : architecture véhicule et produit, CATIA V5/V6, 3DEXPERIENCE, pilotage technique et management d'équipes internationales dans l'automobile. Consultant freelance basé à Mantes-la-Jolie.",
+      og: "fr_FR"
+    },
+    en: {
+      title: "Alberto RAMOS — Senior Mechanical Design Engineer · Vehicle Architect · Technical Project Lead",
+      desc: "Alberto RAMOS, senior mechanical design engineer (20+ years): vehicle and product architecture, CATIA V5/V6, 3DEXPERIENCE, technical project leadership and international team management in automotive engineering. Freelance consultant based near Paris, France.",
+      og: "en_GB"
+    }
+  };
+
+  function setLang(lang) {
+    if (!META[lang]) lang = "fr";
+    document.documentElement.lang = lang;
+    document.title = META[lang].title;
+    var d = document.querySelector('meta[name="description"]');
+    if (d) d.setAttribute("content", META[lang].desc);
+    var o = document.querySelector('meta[property="og:locale"]');
+    if (o) o.setAttribute("content", META[lang].og);
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem("cv-lang", lang); } catch (e) {}
+  }
+
+  // Langue initiale : #en / ?lang=en dans l'URL, sinon choix mémorisé, sinon FR
+  var initial = "fr";
+  var fromUrl = (location.hash === "#en" || /[?&]lang=en\b/.test(location.search)) ? "en" : null;
+  var stored = null;
+  try { stored = localStorage.getItem("cv-lang"); } catch (e) {}
+  initial = fromUrl || stored || "fr";
+  setLang(initial);
+
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.dataset.lang); });
+  });
+
+  // « Download CV » : impression navigateur → Enregistrer en PDF (mise en page A4 via @media print)
+  document.querySelectorAll(".js-print").forEach(function (b) {
+    b.addEventListener("click", function () { window.print(); });
+  });
+
+
+  // ---------------------------------------------------------------
+  // V4 — Animations
+  // ---------------------------------------------------------------
+  var animated = document.documentElement.classList.contains("anim");
+  var printing = false; // à l'impression, chaque compteur affiche directement sa valeur finale
+  function each(sel, fn, root) { Array.prototype.forEach.call((root || document).querySelectorAll(sel), fn); }
+
+  // Nom du hero découpé en lignes (révélées une à une)
+  var h1 = document.getElementById("hero-name");
+  if (h1) {
+    var lines = Array.prototype.filter.call(h1.childNodes, function (n) { return n.nodeType === 3 && n.textContent.trim(); })
+      .map(function (n) { return n.textContent.trim(); });
+    h1.setAttribute("aria-label", lines.join(" "));
+    h1.textContent = "";
+    lines.forEach(function (l, i) {
+      var outer = document.createElement("span"), inner = document.createElement("span");
+      outer.className = "ln"; outer.setAttribute("aria-hidden", "true");
+      inner.className = "ln-i"; inner.style.setProperty("--i", i); inner.textContent = l;
+      outer.appendChild(inner); h1.appendChild(outer);
+    });
+  }
+  each(".roles span", function (el, i) { el.style.setProperty("--i", i); });
+  each(".hero-cta > *", function (el, i) { el.style.setProperty("--i", i); }, document.querySelector(".hero"));
+  each(".hero .cartouche dl > *", function (el, i) { el.style.setProperty("--i", Math.floor(i / 2)); });
+
+  // Compteurs : « 20+ », « 5 »…
+  function countUp(el, delay) {
+    var m = /^(\d+)(.*)$/.exec(el.textContent.trim());
+    if (!m) return;
+    var target = +m[1], suffix = m[2], t0 = null, dur = 1400;
+    el.classList.add("count");
+    el.dataset.final = target + suffix;
+    if (!animated) return;
+    el.textContent = "0" + suffix;
+    setTimeout(function () {
+      if (printing) { el.textContent = el.dataset.final; return; }
+      requestAnimationFrame(function step(t) {
+        if (printing) { el.textContent = el.dataset.final; return; }
+        if (t0 === null) t0 = t;
+        var k = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - k, 3);
+        el.textContent = Math.round(target * e) + suffix;
+        if (k < 1) requestAnimationFrame(step);
+      });
+    }, delay || 0);
+  }
+  each(".hero .cartouche dd.big > span", function (el) { countUp(el, 800); });
+
+  // Apparition au défilement, par groupes (décalage --i dans chaque groupe)
+  var groups = [
+    ".sec-head", ".gantt", ".sec-body .lead", ".sec-body .prose", ".facts", ".fact", ".pillars", ".pillar", ".split > div",
+    ".chips", ".xp-group > .label", ".xp", ".quote", ".project", ".skills", ".skillset", ".ai-item",
+    ".ai .tags", ".trio > div", ".entry", ".contact .wrap > *"
+  ];
+  var targets = [];
+  groups.forEach(function (sel) {
+    var parents = new Map();
+    each(sel, function (el) {
+      if (el.closest(".hero")) return;
+      var p = el.parentNode, n = parents.get(p) || 0;
+      parents.set(p, n + 1);
+      el.classList.add("rv");
+      el.style.setProperty("--i", n);
+      targets.push(el);
+    });
+  });
+  each(".chips", function (box) { each(".chip", function (c, i) { c.classList.add("rv"); c.style.setProperty("--i", i); }, box); });
+
+  function reveal(el) {
+    el.classList.add("in");
+    each(".rv", function (c) { if (c.parentNode === el) c.classList.add("in"); }, el);
+    if (el.matches(".fact")) each("strong:not(.txt-fact)", function (s) { countUp(s, 150); }, el);
+  }
+  if (animated && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(reveal);
+  }
+  // Impression : tout afficher immédiatement
+  window.addEventListener("beforeprint", function () {
+    printing = true;
+    each(".rv", function (el) { el.classList.add("in"); });
+    each(".count", function (el) { if (el.dataset.final) el.textContent = el.dataset.final; });
+  });
+  window.addEventListener("afterprint", function () { printing = false; });
+
+  // Barre de progression + section active dans la navigation
+  var bar = document.querySelector(".progress");
+  var navLinks = {};
+  each(".nav a", function (a) { navLinks[a.getAttribute("href").slice(1)] = a; });
+  var sections = Array.prototype.filter.call(document.querySelectorAll("main section[id]"), function (s) { return navLinks[s.id] || s.id === "formation"; });
+  var ticking = false;
+  function onScroll() {
+    ticking = false;
+    var h = document.documentElement.scrollHeight - innerHeight;
+    if (bar) bar.style.transform = "scaleX(" + (h > 0 ? Math.min(scrollY / h, 1) : 0) + ")";
+    var current = null, mark = innerHeight * 0.35;
+    sections.forEach(function (s) { if (s.getBoundingClientRect().top <= mark) current = s.id; });
+    if (current === "formation") current = "ia";
+    Object.keys(navLinks).forEach(function (k) { navLinks[k].classList.toggle("on", k === current); });
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  // Frise des missions : position des barres calculée à partir des dates (axe 2022-01 → 2026-12)
+  (function () {
+    var now = new Date(), a0 = 2022 * 12, span = 60;
+    function m(v) { if (v === "now") return now.getFullYear() * 12 + now.getMonth() + 1; var p = v.split("-"); return +p[0] * 12 + (+p[1] - 1); }
+    function pct(x) { return Math.max(0, Math.min(100, (x - a0) / span * 100)); }
+    each(".g-bar", function (b) {
+      var from = m(b.dataset.from), to = b.dataset.to === "now" ? m("now") : m(b.dataset.to) + 1;
+      b.style.left = pct(from) + "%"; b.style.width = (pct(to) - pct(from)) + "%";
+    });
+    var n = pct(m("now"));
+    each(".g-now", function (el, i) { el.style.left = n + "%"; if (i === 0) el.dataset.label = document.documentElement.lang === "en" ? "NOW" : "AUJ."; });
+    each(".lang button", function (btn) { btn.addEventListener("click", function () { var f = document.querySelector(".g-now"); if (f) f.dataset.label = btn.dataset.lang === "en" ? "NOW" : "AUJ."; }); });
+  })();
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
