@@ -8,7 +8,7 @@
 <meta name="keywords" content="Mechanical Design Engineer, Mechanical Engineer, Vehicle Architect, Vehicle Architecture, Automotive Engineer, Technical Project Manager, CATIA, 3DEXPERIENCE, Mechanical Design, Automotive Engineering, ingénieur mécanique, architecte véhicule, conception mécanique, freelance">
 <meta name="author" content="Alberto RAMOS">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0E2E4D">
+<meta name="theme-color" content="#2A2E33">
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
@@ -525,23 +525,23 @@ html.anim .entry.in .lvl i:nth-child(5) { transition-delay: .32s; }
 }
 
 /* ------------------------------------------------------------------
-   V5 — Technique & couleur
-   Bleu plan, traits cyan, cotes orange sécurité ; chaque domaine
+   V6 — Technique & couleur, tons gris (dérivée de la V5)
+   Gris graphite, traits gris clair, cotes orange sécurité ; chaque domaine
    d'expertise porte la couleur de son « calque » CAO.
 ------------------------------------------------------------------- */
 :root {
-  --anthracite: #0F263D;
-  --graphite:   #133152;
-  --ink:        #172635;
-  --steel:      #506579;
-  --mist:       #93A8BC;
-  --line:       #D3DDE7;
-  --line-dark:  #2A4B6C;
-  --paper:      #EFF4F8;
+  --anthracite: #23272B;
+  --graphite:   #2E3338;
+  --ink:        #1E2226;
+  --steel:      #5E656C;
+  --mist:       #A0A6AC;
+  --line:       #DADDE0;
+  --line-dark:  #41474D;
+  --paper:      #F2F3F4;
   --accent:     #C4561A;   /* orange lisible sur blanc */
   --accent-lt:  #FF8A3D;   /* orange sur fond bleu */
-  --blueprint:  #0E2E4D;
-  --cyan:       #6CC3F0;
+  --blueprint:  #2A2E33;
+  --cyan:       #C3C9CF;
   --layer-a:    #2F7FE0;   /* architecture */
   --layer-b:    #E0661C;   /* conception */
   --layer-c:    #17A077;   /* pilotage */
@@ -550,7 +550,7 @@ html.anim .entry.in .lvl i:nth-child(5) { transition-delay: .32s; }
 }
 
 /* Barre du haut et progression */
-.topbar { background: rgba(14, 46, 77, .95); border-bottom-color: #25486B; }
+.topbar { background: rgba(42, 46, 51, .95); border-bottom-color: #41474D; }
 .brand b { color: var(--accent-lt); }
 .progress, .nav a::after { background: var(--accent-lt); }
 
@@ -558,32 +558,32 @@ html.anim .entry.in .lvl i:nth-child(5) { transition-delay: .32s; }
 .hero { background: var(--blueprint); }
 .hero::before {
   background-image:
-    linear-gradient(to right, rgba(108,195,240,.10) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(108,195,240,.10) 1px, transparent 1px),
-    linear-gradient(to right, rgba(108,195,240,.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(108,195,240,.045) 1px, transparent 1px);
+    linear-gradient(to right, rgba(205,210,215,.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205,210,215,.10) 1px, transparent 1px),
+    linear-gradient(to right, rgba(205,210,215,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205,210,215,.045) 1px, transparent 1px);
   background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
   mask-image: linear-gradient(100deg, rgba(0,0,0,.35) 10%, #000 70%);
   -webkit-mask-image: linear-gradient(100deg, rgba(0,0,0,.35) 10%, #000 70%);
 }
 .hero .label { color: var(--cyan); }
 .hero .label::before { background: var(--cyan); }
-.roles span { color: #EAF4FB; }
-.roles span:nth-child(n+2) { color: #9FC3DD; }
-.thesis { color: #D4E4F0; border-left-color: var(--accent-lt); }
+.roles span { color: #F1F3F5; }
+.roles span:nth-child(n+2) { color: #AEB4BA; }
+.thesis { color: #D9DDE1; border-left-color: var(--accent-lt); }
 html.anim .thesis::before { background: var(--accent-lt); }
 .btn-light { background: var(--accent-lt); color: #1A0E05; }
 .btn-light:hover { background: #FFA466; }
-.btn-ghost { border-color: #4F7599; }
+.btn-ghost { border-color: #5F666D; }
 
 /* Cadre de plan : repères de zone 1–8 / A–D */
-.frame { position: absolute; inset: 12px; border: 1px solid rgba(108,195,240,.28); pointer-events: none; }
-.fr-top, .fr-left { position: absolute; font: 500 9.5px/1 var(--f-mono); color: rgba(108,195,240,.7); letter-spacing: .1em; }
-.fr-top { top: 0; left: 18px; right: 0; height: 18px; display: grid; grid-template-columns: repeat(8, 1fr); border-bottom: 1px solid rgba(108,195,240,.22); }
-.fr-left { top: 18px; left: 0; bottom: 0; width: 18px; display: grid; grid-template-rows: repeat(4, 1fr); border-right: 1px solid rgba(108,195,240,.22); }
+.frame { position: absolute; inset: 12px; border: 1px solid rgba(205,210,215,.28); pointer-events: none; }
+.fr-top, .fr-left { position: absolute; font: 500 9.5px/1 var(--f-mono); color: rgba(205,210,215,.7); letter-spacing: .1em; }
+.fr-top { top: 0; left: 18px; right: 0; height: 18px; display: grid; grid-template-columns: repeat(8, 1fr); border-bottom: 1px solid rgba(205,210,215,.22); }
+.fr-left { top: 18px; left: 0; bottom: 0; width: 18px; display: grid; grid-template-rows: repeat(4, 1fr); border-right: 1px solid rgba(205,210,215,.22); }
 .fr-top span, .fr-left span { display: grid; place-items: center; }
-.fr-top span + span { border-left: 1px solid rgba(108,195,240,.22); }
-.fr-left span + span { border-top: 1px solid rgba(108,195,240,.22); }
+.fr-top span + span { border-left: 1px solid rgba(205,210,215,.22); }
+.fr-left span + span { border-top: 1px solid rgba(205,210,215,.22); }
 
 /* Ligne de cote sous le nom */
 .name-block { display: inline-grid; max-width: 100%; }
@@ -598,10 +598,10 @@ html.anim .dim { animation: fade .6s var(--ease) both 1s; }
 html.anim .dim::before { transform-origin: center; animation: stroke .9s var(--ease) both 1.05s; }
 
 /* Cartouche */
-.cartouche { border-color: #3C6A94; background: rgba(9, 32, 55, .72); }
-.cartouche-head { border-color: #3C6A94; color: var(--cyan); }
-.cartouche dt, .cartouche dd { border-color: #24476A; }
-.cartouche dt { color: #8FB5D3; border-right-color: #24476A; }
+.cartouche { border-color: #585F66; background: rgba(30, 33, 37, .72); }
+.cartouche-head { border-color: #585F66; color: var(--cyan); }
+.cartouche dt, .cartouche dd { border-color: #3E444A; }
+.cartouche dt { color: #AEB4BA; border-right-color: #3E444A; }
 .cartouche dd.big { color: var(--accent-lt); }
 
 /* --- Sections : références de dossier --- */
@@ -670,8 +670,8 @@ html.anim .gantt.in .g-row:nth-of-type(3) .g-bar { transition-delay: .3s; }
 .project { background: var(--blueprint); }
 .project:not(.light) {
   background-image:
-    linear-gradient(to right, rgba(108,195,240,.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(108,195,240,.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(205,210,215,.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205,210,215,.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 .project::after { opacity: 1; }
@@ -693,8 +693,8 @@ html.anim .gantt.in .g-row:nth-of-type(3) .g-bar { transition-delay: .3s; }
 .ai::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(108,195,240,.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(108,195,240,.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(205,210,215,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205,210,215,.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 .ai .wrap { position: relative; }
@@ -706,7 +706,7 @@ html.anim .gantt.in .g-row:nth-of-type(3) .g-bar { transition-delay: .3s; }
 .ai-item { position: relative; }
 .ai-item::before { content: ""; position: absolute; top: -1px; left: 0; width: 48px; height: 3px; background: var(--layer); }
 .ai-item + .ai-item::before { left: 24px; }
-.ai .tag { border-color: rgba(108,195,240,.45); color: #D9EEFB; }
+.ai .tag { border-color: rgba(205,210,215,.45); color: #E6E9EC; }
 
 /* --- Formation / langues --- */
 .trio .label { color: var(--accent); }
@@ -717,14 +717,14 @@ html.anim .gantt.in .g-row:nth-of-type(3) .g-bar { transition-delay: .3s; }
 .contact::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(108,195,240,.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(108,195,240,.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(205,210,215,.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205,210,215,.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 .contact .wrap { position: relative; }
 .contact .label { color: var(--accent-lt) !important; }
 .contact .cartouche dd a { text-decoration-color: var(--accent-lt); }
-footer { background: #0A2239; border-top-color: #25486B; }
+footer { background: #1F2327; border-top-color: #41474D; }
 
 @media screen and (max-width: 880px) {
   .g-grid { grid-template-columns: minmax(0, 1fr); gap: 4px; }
