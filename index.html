@@ -769,12 +769,12 @@ footer { background: #33373C; border-top-color: #575D63; }
 ------------------------------------------------------------------- */
 /* Étiquettes d'axes dans le hero */
 .axes { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px; }
-.axes span {
+.axes > span {
   font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase;
   padding: 7px 10px; border: 1px solid rgba(205,210,215,.28); color: #E6E9EC;
 }
-.axes span:first-child { border-color: var(--accent-lt); color: var(--accent-lt); }
-html.anim .axes span { animation: fadeUp .6s var(--ease) backwards; animation-delay: calc(.85s + var(--i, 0) * .07s); }
+.axes > span:first-child { border-color: var(--accent-lt); color: var(--accent-lt); }
+html.anim .axes > span { animation: fadeUp .6s var(--ease) backwards; animation-delay: calc(.85s + var(--i, 0) * .07s); }
 
 /* Carte des interfaces pilotées */
 .imap-cap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; font: 500 11px/1.4 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
@@ -854,8 +854,8 @@ html[lang="en"] .team q { quotes: "“" "”"; }
 @media print {
   #pilotage { break-before: page; }
   .axes { margin-top: 2mm; }
-  .axes span { font-size: 6.8pt; padding: 1mm 1.6mm; color: var(--anthracite) !important; border-color: var(--line) !important; }
-  .axes span:first-child { color: var(--accent) !important; border-color: var(--accent) !important; }
+  .axes > span { font-size: 6.8pt; padding: 1mm 1.6mm; color: var(--anthracite) !important; border-color: var(--line) !important; }
+  .axes > span:first-child { color: var(--accent) !important; border-color: var(--accent) !important; }
   .imap-cap { margin-bottom: 2mm; font-size: 6.8pt; }
   .imap { --gap: 8mm; row-gap: 2mm; }
   .node { padding: 2mm 2.5mm; }
